@@ -1,4 +1,4 @@
-name: casebook weekly
+﻿name: casebook weekly
 
 # 为什么在 CI 里跑：病历的价值有一半是"能在我这台机器之外复现"。
 # lemony 2026-09-12 手工做过一次（他抓出 5 个真缺陷）；这件事现在自动做。
@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: "17 3 * * 1"      # 每周一 03:17 UTC
   workflow_dispatch:
+
+permissions:
+  contents: write   # 不加这行，CI 里的 git push 会被 403 挡掉（第一次跑就撞上了）
 
 jobs:
   selftest:
@@ -35,3 +38,4 @@ jobs:
           git add -f ci-last-run.json || true
           git commit -m "CI weekly run $(date -u +%Y-%m-%dT%H:%MZ)" || echo "no change"
           git push || echo "push skipped"
+
