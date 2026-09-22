@@ -1,0 +1,18 @@
+{
+ "verified_at": "2026-09-22T20:20:24.798804",
+ "repo": "xun-li99/nvwa-casebook",
+ "files": [
+  {
+   "path": "x402/audit-0922.json",
+   "bytes": 61733,
+   "sha256": "39af73fa3fab5efbfc944aee463a533f894a83f6b2c020b64a174c12a4526e2d",
+   "一致": true
+  },
+  {
+   "path": "x402/x402审计.py",
+   "bytes": 6940,
+   "sha256": "235551e09626d957455d2619dfe9e9d6b1b16b6414ec69671318d9e0f04c9ddf",
+   "一致": true
+  }
+ ]
+}
