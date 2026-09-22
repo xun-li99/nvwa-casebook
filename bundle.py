@@ -109,6 +109,11 @@ def main():
     if not no_selftest:
         _env = dict(os.environ)
         _env['CASEBOOK_CHILD'] = '1'          # 子进程带标记出生：它不许再起子进程
+        # 2026-09-22 加：**打包器这一次要放行一层**。
+        # 不加这一行的现场：快照里 `案卷坏了 6`——6 条自己要起量具的检查被深度闸拒了，
+        # 于是"打包器的重入保护"被记成"我的仪器坏了"，而**这个错数字随包发出去**。
+        # 放行只此一层：run-all 的 spawn() 见到标记就起，并立刻把标记从孙辈环境里摘掉。
+        _env['CASEBOOK_PACKER_RUN'] = '1'
         subprocess.run([sys.executable, str(HERE / 'run-all.py'), '--json', str(HERE / 'last-run.json')],
                        capture_output=True, text=True, encoding='utf-8', errors='replace', env=_env)
     if not (HERE / 'last-run.json').exists():

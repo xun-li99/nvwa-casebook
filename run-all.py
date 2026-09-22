@@ -73,6 +73,12 @@ HOST = {
     'js_guard':    (TMPD / 'x402-svc' / 'x402-守护.mjs', 'x402-守护.mjs（自愈守护器）'),
     'autopsy':     (HERE.parent / 'record-autopsy' / 'autopsy.py', 'autopsy.py（被量的量具本体）'),
     'store':       (STORE, '本机网络库（network.sqlite3）'),
+    # 2026-09-22 晚加：家网目录（**不是** 璃 的子目录，所以要在表里单独声明）。
+    # 加它的直接原因：`check_0006` 第⑤支要扫"谁在写告警文件"，我第一版把这条路径写死在检查体里，
+    # **三分钟后就被 `check_0035` 第⑤支抓住**（绑本机的检查必须声明依赖）——闸门抓到了写闸门的人。
+    'net_root':    (Path(os.environ.get('CASEBOOK_NET_ROOT',
+                                        r'C:\Users\Mechrevo\Desktop\女娲网络重建\network')),
+                    '家网目录（nuwa-net 的 network/）'),
 }
 
 
@@ -159,8 +165,38 @@ def check_0003():
         return '测不了', (f'apex={apex}（校验拒绝，这一半读到了）但 www 打不通（{www}）——'
                         f'**"我打不通"不是"这条修好了"**，所以这一格不判。')
     ok = apex >= 400 and www == 200
-    return (('仍复现' if ok else '已修复'),
-            f'apex={apex}（校验拒绝） www={www}' + ('（静默丢弃）' if www == 200 else ''))
+    # 2026-09-22 加，**类级闸门（臂②）**：第三次实例（见案卷"两条传输把不知道伪装成失败"）
+    # 之后，判据从"状态码不进账"扩到"传输层错误也不进账"。能不能机械检查？
+    # 行为检查不了，但**脚本里有没有回读**这件事是文本，可以量。
+    # 静态臂的低置信度照实写在 detail 里：它证明"回读被写进了脚本"，不证明"下次真的先读"。
+    arms = {'①两个域名的状态码': (
+        '仍复现' if ok else '已修复',
+        f'apex={apex}（校验拒绝） www={www}' + ('（静默丢弃）' if www == 200 else ''))}
+    if not TMPD.is_dir():
+        arms['②写脚本里有没有回读'] = ('测不了', f'工具箱不在这台机器上：{TMPD}')
+    else:
+        import re as _re
+        write_pat = _re.compile(r"""(-X['"]?\s*,\s*['"]POST['"]|method\s*=\s*['"]POST['"]"""
+                                r"""|/messages/send/|/comments|/vote)""")
+        read_pat = _re.compile(r"""(tail|回读|readback|offset=|/history|/comments\?|limit="""
+                               r"""|/api/v1/proposals/|/api/v1/ballots|my_vote|tally|/posts/)""")
+        writers, no_read = [], []
+        for p in sorted(TMPD.glob('*.py')):
+            try:
+                t = p.read_text(encoding='utf-8', errors='replace')
+            except Exception:                                             # noqa: BLE001
+                continue
+            if write_pat.search(t):
+                writers.append(p.name)
+                if not read_pat.search(t):
+                    no_read.append(p.name)
+        arms['②写脚本里有没有回读'] = (
+            '已修复' if (writers and not no_read) else ('仍复现' if no_read else '测不了'),
+            f'含写调用的脚本 {len(writers)} 个，其中没有任何回读标记的 {len(no_read)} 个'
+            + (f'：{no_read[:6]}' if no_read else '')
+            + '（**静态臂**：量的是文本不是行为——它不能证明我下次真的先读再重试）')
+    state = '仍复现' if any(v[0] == '仍复现' for v in arms.values()) else '已修复'
+    return state, '；'.join(f'{k}{v[0]}' for k, v in arms.items()), arms
 
 
 # ---------------------------------------------------------------- 0004
@@ -287,6 +323,60 @@ def check_0006():
         f"三种客户端读它都是 {absent_reads['naive']!r}，与 404／解析失败同形 —— "
         f"**解包能分开传输层失败，分不开'404'与'确实没有'**：只有仪器之外的账本能分"
         f"（atomic-raven 的三层表，2026-09-12）")
+
+    # ⑤ 类级闸门（2026-09-22 晚加；**这个实例长在我自己的开窗脚本里**）：
+    #    开窗协议第一件事是"读三份告警"，其中 `casebook-alert.txt` **从来没有人写过**，
+    #    而 `开窗.py` 对不存在的文件印的是"不存在（= 全清）"——
+    #    **"没有写的人"与"没有要报的事"在那行字上一模一样**（本条正文那一族，第四次）。
+    #    这一臂量：每份被当作告警读的文件，**在代码里找不找得到写它的人**，以及
+    #    它自己的缺席约定是什么（"清空即删除"还是"每次都重写"）。
+    #    找不到写者 ⇒ 这条通道读到的"干净"是假的，不管文件在不在。
+    import glob as _glob
+    import re as _re2
+    _writers = {}
+    # 依赖先声明再扫（本机依赖缺失 ⇒ 这一支是"测不了"，不是"告警没人写"）。
+    _miss_h = [k for k in ('net_root',) if not HOST[k][0].exists()]
+    _roots = [] if _miss_h else [str(HOST['net_root'][0]), str(HERE), str(TMPD)]
+    for _root in _roots:
+        try:
+            for _f in _glob.glob(os.path.join(_root, '*.py')):
+                try:
+                    _t = Path(_f).read_text(encoding='utf-8', errors='replace')
+                except Exception:                                         # noqa: BLE001
+                    continue
+                base = os.path.basename(_f)
+                for _name in ('inbox-alert.txt', '家网-alert.txt',
+                              'casebook-alert.txt', 'casebook-regression.txt'):
+                    # 第一版按"同一行里既有文件名又有 write_text"来找 ⇒ **四份全判成没有写者**（假阳性）：
+                    # 真实的写法是 `ALERT = HERE / 'x.txt'` 之后另起一行 `ALERT.write_text(...)`，
+                    # 文件名和写入动作**不在同一行**。改成：先绑变量名，再找该变量的写/删动作。
+                    for _m in _re2.finditer(r'(\w+)\s*=\s*[^\n]*' + _re2.escape(_name), _t):
+                        _var = _m.group(1)
+                        if _re2.search(r'\b' + _re2.escape(_var) +
+                                       r'\s*\.\s*(write_text|write_bytes|unlink|open)\b', _t):
+                            _writers.setdefault(_name, set()).add(base)
+        except Exception:                                                 # noqa: BLE001
+            pass
+    # 缺席约定（写者的文档里写着，这里逐条对上）：
+    #   inbox-alert：清空即删除 ⇒ 不在 = 干净；家网/casebook-alert：每次重写 ⇒ 不在 = 写的人没跑
+    conv = {'inbox-alert.txt': '清空即删除（不在=干净，前提是写者跑过）',
+            '家网-alert.txt': '每次重写（不在=写者没跑）',
+            'casebook-alert.txt': '每次重写（不在=写者没跑）',
+            'casebook-regression.txt': '在=有事，无回归即删除'}
+    if _miss_h:
+        arms['⑤告警文件必须有写的人（类级闸门）'] = (
+            '测不了', '本机依赖不在（%s）：告警的写者散在那些目录里，'
+                      '在别的机器上"找不到写者"说明的是**这台机器没有那棵树**，'
+                      '不许读成"告警没人写"' % host_missing(_miss_h))
+    else:
+        missing_writer = [n for n in conv if not _writers.get(n)]
+        arms['⑤告警文件必须有写的人（类级闸门）'] = (
+            '已修复' if not missing_writer else '仍复现',
+            ('四份告警都能在代码里找到写者：'
+             + '；'.join('%s←%s' % (n, ','.join(sorted(_writers[n]))) for n in conv))
+            if not missing_writer else
+            (f'**这些告警文件没有任何代码写它们**：{missing_writer} —— '
+             f'读它的人会把"没有写的人"读成"没有要报的事"（约定：{conv}）'))
 
     states = {v[0] for v in arms.values()}
     case_state = '仍复现' if '仍复现' in states else ('测不了' if states == {'测不了'} else '已修复')
@@ -2520,6 +2610,57 @@ def check_0035():
         ('所有出现本机绝对路径的检查都走了 host_missing()' if not offenders
          else f'**这些检查把路径写死却没声明**：{offenders}'))
 
+    # ⑥ 打包路径不许把"打包器的环境"记成"案卷坏了"（2026-09-22 晚，第三实例）。
+    #    现场：重跑 bundle.py，它印的自测快照里 `案卷坏了 6`——那 6 条是**自己要起量具**的检查，
+    #    被 CASEBOOK_CHILD=1 的深度闸拒了，于是"打包器这一刻不让我起子进程"被印成"我的仪器坏了"，
+    #    而且**这个错数字随包发出去**。三件齐了才算修：打包器设标记、run-all 认标记、
+    #    随包快照里没有因深度闸而起的"案卷坏了"。静态臂，标未验证。
+    bundle_src = (here / 'bundle.py').read_text(encoding='utf-8', errors='replace')
+    packers_ok = ('CASEBOOK_PACKER_RUN' in bundle_src and 'CASEBOOK_PACKER_RUN' in src_all)
+    snap_bad = []
+    snap = here / 'last-run.json'
+    if snap.exists():
+        try:
+            _d = json.loads(snap.read_text(encoding='utf-8'))
+            snap_bad = [r.get('id') for r in (_d.get('results') or [])
+                        if r.get('state') == '案卷坏了'
+                        and ('拒绝起子进程' in str(r.get('detail'))
+                             or 'CASEBOOK_CHILD' in str(r.get('detail')))]
+        except Exception:                                                 # noqa: BLE001
+            snap_bad = ['last-run.json 读不了']
+    arms['⑥打包快照不许把打包器环境记成案卷坏了'] = (
+        '已修复' if (packers_ok and not snap_bad) else '仍复现',
+        ('打包器放行标记两侧都在，且随包快照里没有因深度闸而起的"案卷坏了"'
+         if (packers_ok and not snap_bad)
+         else f'打包器标记={"在" if packers_ok else "**缺**"}；'
+              f'快照里因深度闸记成案卷坏了的={snap_bad or "无"}')
+        + '（静态臂：读文件与读快照，不重跑打包）')
+
+    # ⑦ 公布过 sha256 的产物，必须有一份**发布后回读**的核验收据（2026-09-22 晚，第四实例）。
+    #    现场：同一件 `x402/audit-0922.json`，LF 版 sha256 `39af73fa…`（我公布的就是这个），
+    #    CRLF 版 `27c33cd4…`——行尾被管线改一次，外面那个摘要就成了一句错话。
+    #    这一支读 `publish-verify.json`：全绿 + 仓库禁止行尾规范化，两件都要。
+    pv = here / 'publish-verify.json'
+    repo_ga = _P(os.environ.get(
+        'CASEBOOK_GH_WORK',
+        r'C:\Users\Mechrevo\AppData\Local\Temp\nvwa-casebook')) / '.gitattributes'
+    if not pv.exists():
+        arms['⑦公布过的摘要要有发布后回读的核验收据'] = (
+            '测不了', '没有 publish-verify.json —— 不是"没问题"，是这台机器上没有那份收据')
+    else:
+        try:
+            _pv = json.loads(pv.read_text(encoding='utf-8'))
+            _files = _pv.get('files') or []
+            _bad = [f.get('path') for f in _files if not f.get('一致')]
+            _ga = repo_ga.exists() and '-text' in repo_ga.read_text(encoding='utf-8')
+            arms['⑦公布过的摘要要有发布后回读的核验收据'] = (
+                '已修复' if (_files and not _bad and _ga) else '仍复现',
+                f'{len(_files)} 件已回读核对，不一致 {len(_bad)} 件{_bad or ""}；'
+                f'仓库禁止行尾规范化={_ga}；收据时间 {_pv.get("verified_at", "?")[:19]}')
+        except Exception as e:                                            # noqa: BLE001
+            arms['⑦公布过的摘要要有发布后回读的核验收据'] = (
+                '案卷坏了', f'收据读不了：{type(e).__name__}: {str(e)[:80]}')
+
     state = '已修复' if all(v[0] == '已修复' for v in arms.values()) else '仍复现'
     return state, (f'9 条扰动臂（{passed}/{total}）+ 臂数下限 + 读法进收据 + 本机依赖必须声明；'
                    f'对照件（补丁前的源码）随包发出，让"洞先于补丁存在"可复算。'), arms
@@ -2769,6 +2910,9 @@ def classify(state):
 # 每个都跑一次全量自测、都往状态史里追加一行。
 # 修法不能只改那一支（那只是把这一次的事故抹掉）：要在**结构上**给"检查能起什么"设上限。
 CHILD_ENV = 'CASEBOOK_CHILD'
+# 2026-09-22 加：打包器那一次运行要能**放行一层**（见 spawn() 里的注释）。
+# 没有这个标记时，打包快照里 6 条要起量具的检查会被记成"案卷坏了"，而那个错数字会进发布物。
+PACKER_ENV = 'CASEBOOK_PACKER_RUN'
 
 
 def spawn(cmd, env_extra=None, **kw):
@@ -2783,12 +2927,20 @@ def spawn(cmd, env_extra=None, **kw):
     import subprocess
     env = dict(os.environ)
     env.update(kw.pop('env', None) or {})      # 调用方自带的 env 要**合并**，不能和我的撞
-    if env.get(CHILD_ENV) == '1':
+    # 2026-09-22 加：**打包器那一次运行要放行一层。**
+    # 起因是打包时印出来的自测快照：`案卷坏了 6`。那 6 条不是我的机器坏了，而是
+    # `bundle.py` 起 `run-all.py --json` ⇒ 本进程带着 CASEBOOK_CHILD=1 ⇒ 这些**自己要起量具**的检查
+    # 被深度闸拒了，于是把"打包器的重入保护"记成了"我的仪器坏了"，并且**这个错数字进了发布物**。
+    # 判词错在归因，不在数值：闸没错，错的是它把"我是子进程"当成了"我的机器坏了"。
+    packer_run = env.get(PACKER_ENV) == '1'
+    if env.get(CHILD_ENV) == '1' and not packer_run:
         raise RuntimeError(
             f'拒绝起子进程：本进程已是子进程（{CHILD_ENV}=1）。'
             f'命令：{cmd[:2] if isinstance(cmd, (list, tuple)) else cmd}…… '
             f'验证回路不许成环（case 0014 复发，2026-09-19 第二次 fork 炸弹）')
     env[CHILD_ENV] = '1'
+    # 放行只此一层：标记立刻摘掉，孙辈照旧被深度闸拒 —— 成环保护一点没松。
+    env.pop(PACKER_ENV, None)
     if env_extra:
         env.update(env_extra)
     return subprocess.run(cmd, env=env, **kw)
@@ -2912,6 +3064,13 @@ def main():
     # （文件在 = 有事），因为只打印的东西不会被人读到。
     STATE = HERE / 'casebook-state.json'
     REG = HERE / 'casebook-regression.txt'
+    # 2026-09-22 晚加：**告警文件要有写的人。**
+    # 现场：开窗协议叫我"第一件事读三份告警"，其中 `casebook-alert.txt` **从来没有人写过**，
+    # 而 `开窗.py` 对不存在的文件印的是"不存在（= 全清）"——
+    # **"没有写的人"和"没有要报的事"在那行字上长得一模一样**（0006／0031 那一族，这次长在我自己的开窗脚本里）。
+    # 约定（照 `家网-alert.txt` 的写法）：**每次全量跑都重写本文件**，所以
+    # **文件不新 = 写的人坏了 ≠ 案卷没变**；文件在且写着"无变化"才是真的干净。
+    ALERT = HERE / 'casebook-alert.txt'
     prev = None
     if STATE.exists():
         try:
@@ -3013,6 +3172,45 @@ def main():
             print('Δ 首次记录：没有上一次可对照（此后每次运行都会报差）')
         STATE.write_text(json.dumps({'ran_at': datetime.now().isoformat(), 'states': cur},
                                     ensure_ascii=False, indent=1), encoding='utf-8')
+        # ---- 告警文件：**每次全量跑都写**（文件不新 = 写的人坏了，不是案卷没变）----
+        try:
+            counts = {}
+            for s in cur.values():
+                counts[s] = counts.get(s, 0) + 1
+            broken = sorted(cid for cid, s in cur.items() if s == '案卷坏了')
+            unmeas = sorted(cid for cid, s in cur.items() if s == '测不了')
+            lines = [
+                '%s  casebook 全量自测写完' % datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                '（本文件由 run-all.py 每次**全量**跑重写；**文件不新 = 写的人坏了，≠ 案卷没变**）',
+                '',
+                '状态：' + ' · '.join('%s %d' % (k, counts[k]) for k in
+                                      ('仍复现', '部分修复', '已修复', '测不了', '案卷坏了') if k in counts),
+                '案卷坏了：%s' % ('（无）' if not broken else ', '.join(broken)),
+                '测不了：%s' % ('（无）' if not unmeas else ', '.join(unmeas[:8])
+                              + (' 等 %d 条' % len(unmeas) if len(unmeas) > 8 else '')),
+            ]
+            if drift:
+                lines.append('**Δ 对期望态：%d 条真漂移** —— %s'
+                             % (len(drift), ', '.join('%s %s→%s' % r for r in drift[:6])))
+            else:
+                lines.append('Δ 对期望态：真漂移 0 条' + ('' if exp_digest else '（**期望态清单不在**，'
+                                                          '这一行没有基准）'))
+            if prev and prev.get('states'):
+                changed = [(cid, prev['states'].get(cid), s) for cid, s in sorted(cur.items())
+                           if prev['states'].get(cid) not in (None, s)]
+                lines.append('Δ 与上次：%s' % ('无变化' if not changed
+                                            else '%d 条变了 —— %s'
+                                                 % (len(changed),
+                                                    ', '.join('%s %s→%s' % r for r in changed[:8]))))
+            else:
+                lines.append('Δ 与上次：没有上一次可对照（首次记录）')
+            if env_drift:
+                lines.append('（另有 %d 条在本机/外部依赖上变了，按环境读，不算真漂移）' % len(env_drift))
+            lines.append('')
+            lines.append('读数：%s' % (HERE / 'last-run.json'))
+            ALERT.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+        except Exception as e:                                                # noqa: BLE001
+            print(f'  ! 告警文件写不动：{type(e).__name__}: {e}（**这不是"没事"，是我写不出来**）')
     if '--json' in sys.argv:
         i = sys.argv.index('--json')
         if len(sys.argv) > i + 1:
