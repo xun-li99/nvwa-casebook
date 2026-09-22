@@ -1,0 +1,278 @@
+{
+ "cases": {
+  "0001": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0002": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0003": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": true,
+   "why": "读的是外部主机的 www 行为（apex/www 两条路由）"
+  },
+  "0004": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0005": {
+   "class": "world",
+   "host_local": false,
+   "state": "部分修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0006": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": true,
+   "why": "读的是网络失败的类型（拒连/DNS/404）"
+  },
+  "0007": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0008": {
+   "class": "world",
+   "host_local": true,
+   "state": "仍复现",
+   "volatile": false,
+   "why": "读的是本机默认编码（这台是 cp936；Linux 上是 UTF-8）"
+  },
+  "0009": {
+   "class": "world",
+   "host_local": true,
+   "state": "已修复",
+   "volatile": false,
+   "why": "读的是本机的钉死输入包 packet-0912"
+  },
+  "0010": {
+   "class": "world",
+   "host_local": true,
+   "state": "仍复现",
+   "volatile": false,
+   "why": "读的是本机两次打包的摘要"
+  },
+  "0011": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0012": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": true,
+   "why": "读的是外部主机对两条路径的状态码"
+  },
+  "0013": {
+   "class": "world",
+   "host_local": true,
+   "state": "仍复现",
+   "volatile": false,
+   "why": "扫的是本机三棵树（换一台机器扫描范围就是空的）"
+  },
+  "0014": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0015": {
+   "class": "no-answer",
+   "host_local": false,
+   "state": "测不了",
+   "volatile": false,
+   "why": ""
+  },
+  "0016": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": true,
+   "why": "读的是公开语料 ainglish.org 的 manifest 集合"
+  },
+  "0017": {
+   "class": "world",
+   "host_local": true,
+   "state": "部分修复",
+   "volatile": false,
+   "why": "读的是本机网络库 network.sqlite3"
+  },
+  "0018": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0019": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0020": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0021": {
+   "class": "world",
+   "host_local": true,
+   "state": "部分修复",
+   "volatile": false,
+   "why": "读的是本机 door-check.py 与门状态文件"
+  },
+  "0022": {
+   "class": "world",
+   "host_local": true,
+   "state": "已修复",
+   "volatile": false,
+   "why": "读的是本机钉死输入与工具源码"
+  },
+  "0023": {
+   "class": "world",
+   "host_local": false,
+   "state": "仍复现",
+   "volatile": false,
+   "why": ""
+  },
+  "0024": {
+   "class": "world",
+   "host_local": true,
+   "state": "部分修复",
+   "volatile": false,
+   "why": "读的是本机 door-check.py"
+  },
+  "0025": {
+   "class": "world",
+   "host_local": false,
+   "state": "部分修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0026": {
+   "class": "world",
+   "host_local": false,
+   "state": "部分修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0027": {
+   "class": "world",
+   "host_local": false,
+   "state": "部分修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0028": {
+   "class": "world",
+   "host_local": true,
+   "state": "部分修复",
+   "volatile": false,
+   "why": "读的是本机 door-check.py"
+  },
+  "0029": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0030": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0031": {
+   "class": "world",
+   "host_local": false,
+   "state": "部分修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0032": {
+   "class": "world",
+   "host_local": true,
+   "state": "仍复现",
+   "volatile": false,
+   "why": "读的是本机是否存有该提案的原始响应"
+  },
+  "0033": {
+   "class": "world",
+   "host_local": true,
+   "state": "已修复",
+   "volatile": false,
+   "why": "读的是本机归档的清单文件"
+  },
+  "0034": {
+   "class": "world",
+   "host_local": true,
+   "state": "已修复",
+   "volatile": false,
+   "why": "读的是本机 submission.json"
+  },
+  "0035": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0036": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0037": {
+   "class": "world",
+   "host_local": false,
+   "state": "已修复",
+   "volatile": false,
+   "why": ""
+  },
+  "0038": {
+   "class": "world",
+   "host_local": true,
+   "state": "部分修复",
+   "volatile": false,
+   "why": "这一支要 spawn 两条 run-all 子进程，其中一条跑 0006（会打外网）⇒ 时长依赖本机与外网"
+  }
+ },
+ "committed_at": "2026-09-21T19:25:00",
+ "counts": {
+  "host_local": 13,
+  "stable": 21,
+  "volatile": 4
+ },
+ "note": "每个案卷的**期望读数**：红堆拖不动的定点。volatile=读数依赖外面；host_local=依赖本机文件；两者皆为假才是真漂移。改这个文件是一次**可见的动作**，不是悄悄 rebase。 2026-09-21：加 0038（跑得慢/卡住同形），host_local=True 因为它的两臂要打外网。",
+ "scope": "full"
+}

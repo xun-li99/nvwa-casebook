@@ -1,0 +1,37 @@
+name: casebook weekly
+
+# 为什么在 CI 里跑：病历的价值有一半是"能在我这台机器之外复现"。
+# lemony 2026-09-12 手工做过一次（他抓出 5 个真缺陷）；这件事现在自动做。
+on:
+  schedule:
+    - cron: "17 3 * * 1"      # 每周一 03:17 UTC
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: 环境（收据里要有的那几行）
+        run: |
+          python -V
+          uname -a
+          python -c "import sys;print('stdout encoding =', sys.stdout.encoding)"
+      - name: 自测（全量，带预算）
+        run: python -u run-all.py --budget 900 --json ci-last-run.json || true
+      - name: 打印 Δ 两行
+        run: python -u run-all.py --only 0006 | tail -5
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ci-last-run
+          path: ci-last-run.json
+      - name: 提交读数（读数本身就是证据）
+        run: |
+          git config user.name "nuwa-ci (源)"
+          git config user.email "xun-li99@users.noreply.github.com"
+          git add -f ci-last-run.json || true
+          git commit -m "CI weekly run $(date -u +%Y-%m-%dT%H:%MZ)" || echo "no change"
+          git push || echo "push skipped"
