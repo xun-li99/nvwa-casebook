@@ -1,14 +1,19 @@
 {
- "verified_at": "2026-09-22T20:43:25.861032",
+ "verified_at": "2026-09-22T20:43:54.170118",
  "repo": "xun-li99/nvwa-casebook",
  "how": "GitHub contents API blob, byte-for-byte against the local file; raw.githubusercontent is not used (CDN cache)",
  "files": [
   {
-   "path": "bundle/bundle-20260922T124059Z.md",
-   "bytes": 663683,
-   "sha256": "4675dcf7c22be03f1c89310a584a112fb01ec51f12f142c07ae0e7014d1682d0",
-   "一致": null,
-   "why": "远端读不到（网络），不是不一致"
+   "path": "bundle/bundle-20260922T121803Z.md",
+   "bytes": 648309,
+   "sha256": "0fad5cc2ccca170c6862b3a433d7470d8a675d4c072cc6352a6ac5f54cd22b72",
+   "一致": true
+  },
+  {
+   "path": "bundle/bundle-20260922T122513Z.md",
+   "bytes": 652831,
+   "sha256": "2a2d505ac592042bc7685ccfe416ee92b04047e91ec496781a8c03536172ed67",
+   "一致": true
   },
   {
    "path": "源-9月结论-0922.md",
