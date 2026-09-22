@@ -638,9 +638,13 @@ def check_0013():
     if env_roots:
         mine, tmp = [Path(x) for x in env_roots.split(';') if x], None
     else:
-        mine = [Path(r'C:\Users\Mechrevo\Desktop\女娲系统\源-传承'),
-                Path(r'C:\Users\Mechrevo\Desktop\女娲网络重建')]
-        tmp = Path(r'C:\Users\Mechrevo\Desktop\璃\临时文件')
+        base = LI.parent            # Desktop 根：跟着 CASEBOOK_HOST_ROOT 走，不再写死
+        mine = [base / '女娲系统' / '源-传承', base / '女娲网络重建']
+        tmp = TMPD
+        absent = [str(p) for p in mine + [tmp] if not p.exists()]
+        if absent:
+            # 2026-09-22（类级闸门逼出来的）：**扫不到不等于"没有那把刀"**。
+            return host_unmeasurable(absent, '这条要扫的三个目录在这台机器上不全')
     files = []
     for root in mine:
         if root.exists():
@@ -681,7 +685,7 @@ def check_0013():
             except Exception:                                             # noqa: BLE001
                 continue
             if _re.search(r'"pkill"|\bpkill\b', txt) and 'chromium' in txt:
-                others.append(str(p).replace(r'C:\Users\Mechrevo\Desktop\璃\临时文件' + '\\', ''))
+                others.append(str(p).replace(str(TMPD) + '\\', ''))
 
     if hits:
         return '仍复现', f'我们自己的代码里仍有按名批量杀的写法 {len(hits)} 处：' + '；'.join(hits[:6])
@@ -1013,7 +1017,7 @@ def check_0017():
     判据：该成员 inbox 有行，而 read_at 非空数为 0 → 仍复现（计数只能上升）。
     """
     import sqlite3
-    db = Path(r'C:\Users\Mechrevo\Desktop\女娲网络重建\network\network.sqlite3')
+    db = HOST['store'][0]           # 走声明表，不再写死（2026-09-22，类级闸门要求）
     if not db.exists():
         return '测不了', f'网络库不在: {db}（世界没变，只是量不了）'
     con = sqlite3.connect(f'file:{db}?mode=ro', uri=True)
@@ -2208,7 +2212,9 @@ def check_0031():
 
     # ② 真实残留：数出来，不假装清零
     import re as _re
-    tmp = _P(r'C:\Users\Mechrevo\Desktop\璃\临时文件')
+    tmp = _P(TMPD)
+    if not tmp.exists():
+        return host_unmeasurable([str(tmp)], '这条要数的临时脚本都在这台机器的这个目录里')
     pat = _re.compile(r"\.get\([^)]*\)\s*or\s*(?:[^\n]*\.get\([^)]*\)\s*or\s*)?(?:\[\]|\{\})")
     hits = []
     for f in sorted(tmp.glob('*.py')):
@@ -2255,7 +2261,6 @@ def check_0032():
     from pathlib import Path as _P
 
     arms = {}
-    IDENT = _P(r'C:\Users\Mechrevo\Desktop\璃\零\nuwa-身份.json')
     SLUG = 'by-construction-by-rule-in-practice'
     AUD = 'colony_-_Y_Q0he9baS4RH_fSPbnn0gSnYbEV4j'
 
@@ -2333,8 +2338,7 @@ CHECKS.append(('0032', '摘要字段被当成证据；结算状态被读成"什�
 def _ainglish_submission():
     """读我那次 ainglish 提交的实物（清单＋成员值＋界）。不在就返回 None。"""
     import json as _j
-    from pathlib import Path as _P
-    p = _P(r'C:\Users\Mechrevo\Desktop\璃\临时文件\ainglish-复现\submission.json')
+    p = TMPD / 'ainglish-复现' / 'submission.json'      # 走本机根，不写死（2026-09-22）
     if not p.exists():
         return None
     return _j.loads(p.read_text(encoding='utf-8'))
@@ -2495,8 +2499,29 @@ def check_0035():
         '收据里明写了 offset-less = UTC' if reads and 'offset-less = UTC' in reads[0]
         else '没写清代价：北京时间的记录会与作者的日历差 8 小时，而读者不知道')
 
+    # ⑤ 类级闸门（2026-09-22 加，**CI 第一跑逼出来的**）：
+    #    第一次在 GitHub runner 上跑，38 条里 8 条报"案卷坏了"——它们把绝对路径写死在代码里。
+    #    修在痛处（改那 8 条）不算修完这一类；这一支扫**所有** check：
+    #    凡是正文里出现本机绝对路径的，就必须走 `host_missing()` 声明依赖。
+    #    否则下一次新写的检查可以照样把路径写死，而报告看起来一切正常（0027 的形状）。
+    src_all = (here / 'run-all.py').read_text(encoding='utf-8', errors='replace')
+    blocks, cur = {}, None
+    for ln in src_all.splitlines():
+        if ln.startswith('def check_') and '(' in ln:
+            cur = ln.split('(')[0].replace('def ', '')
+            blocks[cur] = []
+        elif cur:
+            blocks[cur].append(ln)
+    offenders = [name for name, lines in blocks.items()
+                 if any(('C:\\Users' in l or 'C:/Users' in l) for l in lines)
+                 and not any('host_missing(' in l for l in lines)]
+    arms['⑤绑本机的检查都声明依赖（类级闸门）'] = (
+        '已修复' if not offenders else '仍复现',
+        ('所有出现本机绝对路径的检查都走了 host_missing()' if not offenders
+         else f'**这些检查把路径写死却没声明**：{offenders}'))
+
     state = '已修复' if all(v[0] == '已修复' for v in arms.values()) else '仍复现'
-    return state, (f'9 条扰动臂（{passed}/{total}）+ 臂数下限 + 读法进收据；'
+    return state, (f'9 条扰动臂（{passed}/{total}）+ 臂数下限 + 读法进收据 + 本机依赖必须声明；'
                    f'对照件（补丁前的源码）随包发出，让"洞先于补丁存在"可复算。'), arms
 
 
