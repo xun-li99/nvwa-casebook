@@ -1,0 +1,970 @@
+[
+ {
+  "service": "https://x402.twit.sh",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 29,
+  "n_obj": 0,
+  "n_str": 29,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://x402.twit.sh/users/by/username",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly94NDAyLnR3aXQuc2gvdXNlcnMvYnkvdXNlcm5hbWUiLCJkZXNjcmlwdGlvbiI6Ikxvb2sgdXAgYSBUd2l0dGVyL1ggdXNlciBwcm9maWxlIGJ5IHRoZWlyIHNjcmVlbiBuYW1lLiBSZXR1cm5zIGZ1bGwgcHJvZmlsZSBkYXRhIGluY2x1ZGluZyBpZCwgbmFtZSwgdXNlcm5hbWUsIGJpbywgZm9sbG93ZXIgY291bnQsIGZvbGxvd2luZyBjb3VudCwgdHdlZXQgY291bnQsIHZlcmlmaWNhdGlvbiBzdGF0dXMsIGFuZCBwcm9maWxlIGltYWdlIFVSTC4gUXVlcnkgcGFyYW06IHVzZXJuYW1lIChzdHJpbmcsIHJlcXVpcmVkKSAtIFR3aXR0ZXIgc2NyZWVuIG5hbWUgd2l0aG91dCBALCBlLmcuIEdFVCAvdXNlcnMvYnkvdXNlcm5hbWU/dXNlcm5hbWU9ZWxvbm11c2suIFJldHVybnMgWCB2MiBBUEktY29tcGF0aWJsZSBKU09OLiIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjUwMDAiLCJhc3NldCI6IjB4ODMzNTg5ZkNENmVEYjZFMDhmNGM3QzMyRDRmNzFiNTRiZEEwMjkxMyIsInBheVRvIjoiMHg5ZEJBNDE0NjM3YzYxMWExNkJFYTZmMDc5NkJGY2JjQmRjNDEwZGY4IiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJkaXNjb3ZlcmFibGUiOnRydWUsImNhdGVnb3J5IjoiYXBpIiwidGFncyI6WyJ0d2l0dGVyIiwieCIsInNvY2lhbCIsInVzZXIiLCJwcm9maWxlIiwibG9va3VwIiwidXNlcm5hbWUiLCJzY3JlZW4tbmFtZSIsImZvbGxvd2VycyIsImJpbyIsInZlcmlmaWNhdGlvbiIsImFnZW50IiwieDQwMiJdLCJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwicXVlcnlQYXJhbXMiOnsidXNlcm5hbWUiOiJlbG9ubXVzayJ9LCJtZXRob2QiOiJHRVQifSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJkYXRhIjp7ImlkIjoiOTI1MzY3MiIsIm5hbWUiOiJIYWwgRmlubmV5IiwidXNlcm5hbWUiOiJoYWxmaW4iLCJkZXNjcmlwdGlvbiI6IlJ1bm5pbmcgYml0Y29pbi4iLCJ2ZXJpZmllZCI6ZmFsc2UsInB1YmxpY19tZXRyaWNzIjp7ImZvbGxvd2Vyc19jb3VudCI6MTM0MDAwLCJmb2xsb3dpbmdfY291bnQiOjIwMCwidHdlZXRfY291bnQiOjYwMCwibGlrZV9jb3VudCI6MzAwfX19fX0sInNjaGVtYSI6eyIkc2NoZW1hIjoiaHR0cHM6Ly9qc29uLXNjaGVtYS5vcmcvZHJhZnQvMjAyMC0xMi9zY2hlbWEiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJpbnB1dCI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJ0eXBlIjp7InR5cGUiOiJzdHJpbmciLCJjb25zdCI6Imh0dHAifSwibWV0aG9kIjp7InR5cGUiOiJzdHJpbmciLCJlbnVtIjpbIkdFVCJdfSwicXVlcnlQYXJhbXMiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidXNlcm5hbWUiOnsidHlwZSI6InN0cmluZyIsImRlc2NyaXB0aW9uIjoiVHdpdHRlciBzY3JlZW4gbmFtZSB3aXRob3V0IEAifX0sInJlcXVpcmVkIjpbInVzZXJuYW1lIl19fSwicmVxdWlyZWQiOlsidHlwZSIsIm1ldGhvZCJdLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9LCJvdXRwdXQiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidHlwZSI6eyJ0eXBlIjoic3RyaW5nIn0sImV4YW1wbGUiOnsidHlwZSI6Im9iamVjdCJ9fSwicmVxdWlyZWQiOlsidHlwZSJdfX0sInJlcXVpcmVkIjpbImlucHV0Il19fSwiYnVpbGRlci1jb2RlIjp7ImluZm8iOnsiYSI6ImJjX3FvYmo5M2liIn0sInNjaGVtYSI6eyIkc2NoZW1hIjoiaHR0cHM6Ly9qc29uLXNjaGVtYS5vcmcvZHJhZnQvMjAyMC0xMi9zY2hlbWEiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJhIjp7InR5cGUiOiJzdHJpbmciLCJwYXR0ZXJuIjoiXlthLXowLTlfXXsxLDMyfSQiLCJkZXNjcmlwdGlvbiI6IkFwcCBidWlsZGVyIGNvZGUifSwidyI6eyJ0eXBlIjoic3RyaW5nIiwicGF0dGVybiI6Il5bYS16MC05X117MSwzMn0kIiwiZGVzY3JpcHRpb24iOiJXYWxsZXQgYnVpbGRlciBjb2RlIn0sInMiOnsidHlwZSI6ImFycmF5IiwiaXRlbXMiOnsidHlwZSI6InN0cmluZyIsInBhdHRlcm4iOiJeW2EtejAtOV9dezEsMzJ9JCJ9LCJkZXNjcmlwdGlvbiI6IlNlcnZpY2UgYnVpbGRlciBjb2RlcyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfX19fQ==",
+    "x-powered-by": "Express",
+    "x-railway-request-id": "yWHMBLeQSWCyaU_Q5nX1uw",
+    "x-hikari-trace": "sjc1.qeyn",
+    "x-railway-edge": "sjc1"
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://stable-enrich-git-stableenrich-solar-rgb-image-merit-systems.vercel.app",
+  "status": "500",
+  "transport": "代理",
+  "class": "HTTP 500",
+  "probe": null
+ },
+ {
+  "service": "https://skills.onesource.io",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 71,
+  "n_obj": 0,
+  "n_str": 71,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "GET /api/chain/allowance",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://api.onesource.io",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 71,
+  "n_obj": 0,
+  "n_str": 71,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "GET /api/chain/allowance",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://dataendpoints-production.up.railway.app",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://glim.sh",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 34,
+  "n_obj": 0,
+  "n_str": 34,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "POST /api/v1/twitter/search",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://stable-travel-hkd3tku0j-merit-systems.vercel.app",
+  "status": "404",
+  "transport": "代理",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://stablesocial.dev",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://api.nansen.ai",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 84,
+  "n_obj": 0,
+  "n_str": 84,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "POST /api/v1/agent/expert",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://api.strale.io",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 347,
+  "n_obj": 0,
+  "n_str": 347,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": true,
+  "probe": {
+   "resource": "https://api.strale.io/x402/v2/dangerous-goods-classify",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkLiBEYW5nZXJvdXMgR29vZHMgQ2xhc3NpZnkgY29zdHMgJDAuMDIxNiBVU0RDIHBlciBjYWxsLiIsInJlc291cmNlIjp7InVybCI6Imh0dHBzOi8vYXBpLnN0cmFsZS5pby94NDAyL3YyL2Rhbmdlcm91cy1nb29kcy1jbGFzc2lmeSIsImRlc2NyaXB0aW9uIjoiQ2xhc3NpZnkgZGFuZ2Vyb3VzIGdvb2RzIGJ5IFVOIG51bWJlciBvciBzdWJzdGFuY2UgbmFtZS4gUmV0dXJucyBoYXphcmQgY2xhc3MsIHBhY2tpbmcgZ3JvdXAsIGxhYmVscywgbWFyaW5lIHBvbGx1dGFudCBzdGF0dXMuIDIwMCsgc3Vic3RhbmNlcy4iLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24ifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMiLCJhbW91bnQiOiIyMTYwMCIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwicGF5VG8iOiIweDY2RDdDMkY5NTIzNjJCRkIyNEZEN0YwMmE5YmVDOWM3NTRlYTgzYkMiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEIENvaW4iLCJ2ZXJzaW9uIjoiMiJ9LCJtYXhBbW91bnRSZXF1aXJlZCI6IjIxNjAwIiwicmVzb3VyY2UiOiJodHRwczovL2FwaS5zdHJhbGUuaW8veDQwMi92Mi9kYW5nZXJvdXMtZ29vZHMtY2xhc3NpZnkiLCJkZXNjcmlwdGlvbiI6IkNsYXNzaWZ5IGRhbmdlcm91cyBnb29kcyBieSBVTiBudW1iZXIgb3Igc3Vic3RhbmNlIG5hbWUuIFJldHVybnMgaGF6YXJkIGNsYXNzLCBwYWNraW5nIGdyb3VwLCBsYWJlbHMsIG1hcmluZSBwb2xsdXRhbnQgc3RhdHVzLiAyMDArIHN1YnN0YW5jZXMuIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwib3V0cHV0U2NoZW1hIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwiZGlzY292ZXJhYmxlIjp0cnVlLCJxdWVyeVBhcmFtcyI6eyJzdWJzdGFuY2UiOnsidHlwZSI6InN0cmluZyIsImRlc2NyaXB0aW9uIjoiU3Vic3RhbmNlIG5hbWUgb3IgVU4gbnVtYmVyIChlLmcuIFVOMTIwMywgR2Fzb2xpbmUpIiwicmVxdWlyZWQiOnRydWV9fX0sIm91dHB1dCI6eyJlcnJvciI6eyJ0eXBlIjoic3RyaW5nIn0sInF1ZXJ5Ijp7InR5cGUiOiJzdHJpbmcifSwibWF0Y2hlcyI6eyJ0eXBlIjoiYXJyYXkifSwidG90YWxfbWF0Y2hlcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19XSwicGF5bWVudFJlcXVpcmVtZW50cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiYmFzZSIsIm1heEFtb3VudFJlcXVpcmVkIjoiMjE2MDAiLCJyZXNvdXJjZSI6Imh0dHBzOi8vYXBpLnN0cmFsZS5pby94NDAyL3YyL2Rhbmdlcm91cy1nb29kcy1jbGFzc2lmeSIsImRlc2NyaXB0aW9uIjoiQ2xhc3NpZnkgZGFuZ2Vyb3VzIGdvb2RzIGJ5IFVOIG51bWJlciBvciBzdWJzdGFuY2UgbmFtZS4gUmV0dXJucyBoYXphcmQgY2xhc3MsIHBhY2tpbmcgZ3JvdXAsIGxhYmVscywgbWFyaW5lIHBvbGx1dGFudCBzdGF0dXMuIDIwMCsgc3Vic3RhbmNlcy4iLCJtaW1lVHlwZSI6ImFwcGxpY2F0aW9uL2pzb24iLCJwYXlUbyI6IjB4NjZEN0MyRjk1MjM2MkJGQjI0RkQ3RjAyYTliZUM5Yzc1NGVhODNiQyIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifSwib3V0cHV0U2NoZW1hIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwiZGlzY292ZXJhYmxlIjp0cnVlLCJxdWVyeVBhcmFtcyI6eyJzdWJzdGFuY2UiOnsidHlwZSI6InN0cmluZyIsImRlc2NyaXB0aW9uIjoiU3Vic3RhbmNlIG5hbWUgb3IgVU4gbnVtYmVyIChlLmcuIFVOMTIwMywgR2Fzb2xpbmUpIiwicmVxdWlyZWQiOnRydWV9fX0sIm91dHB1dCI6eyJlcnJvciI6eyJ0eXBlIjoic3RyaW5nIn0sInF1ZXJ5Ijp7InR5cGUiOiJzdHJpbmcifSwibWF0Y2hlcyI6eyJ0eXBlIjoiYXJyYXkifSwidG90YWxfbWF0Y2hlcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19XSwiZXh0ZW5zaW9ucyI6eyJiYXphYXIiOnsiaW5mbyI6eyJpbnB1dCI6eyJ0eXBlIjoiaHR0cCIsInF1ZXJ5UGFyYW1zIjp7InN1YnN0YW5jZSI6ImV4YW1wbGVfc3Vic3RhbmNlIn0sIm1ldGhvZCI6IkdFVCJ9fSwic2NoZW1hIjp7IiRzY2hlbWEiOiJodHRwczovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC8yMDIwLTEyL3NjaGVtYSIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7ImlucHV0Ijp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InR5cGUiOnsidHlwZSI6InN0cmluZyIsImNvbnN0IjoiaHR0cCJ9LCJtZXRob2QiOnsidHlwZSI6InN0cmluZyIsImVudW0iOlsiR0VUIiwiSEVBRCIsIkRFTEVURSJdfSwicXVlcnlQYXJhbXMiOnsidHlwZSI6Im9iamVjdCIsInJlcXVpcmVkIjpbInN1YnN0YW5jZSJdLCJwcm9wZXJ0aWVzIjp7InN1YnN0YW5jZSI6eyJ0eXBlIjoic3RyaW5nIiwiZGVzY3JpcHRpb24iOiJTdWJzdGFuY2UgbmFtZSBvciBVTiBudW1iZXIgKGUuZy4gVU4xMjAzLCBHYXNvbGluZSkifX19fSwicmVxdWlyZWQiOlsidHlwZSIsIm1ldGhvZCJdLCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9fSwicmVxdWlyZWQiOlsiaW5wdXQiXX19fX0=",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-railway-request-id": "4J_tE2x-TnSjPDU0Cx5-qw",
+    "x-ratelimit-limit": "60",
+    "x-ratelimit-remaining": "58",
+    "x-ratelimit-reset": "1790075209",
+    "x-request-id": "120efeb1-999c-486e-bf6b-c969e6230072",
+    "x-xss-protection": "0",
+    "x-hikari-trace": "sjc1.mdvq",
+    "x-railway-edge": "sjc1"
+   },
+   "quote": {
+    "error": "Payment required. Dangerous Goods Classify costs $0.0216 USDC per call.",
+    "price_xno": null,
+    "accepts": 1
+   }
+  }
+ },
+ {
+  "service": "https://api.x402node.dev",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 543,
+  "n_obj": 0,
+  "n_str": 543,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://api.x402node.dev/ai/json-repair",
+   "status": "404",
+   "is_402": false,
+   "transport": "直连",
+   "headers": {
+    "x-content-type-options": "nosniff",
+    "x-powered-by": "Express"
+   },
+   "quote": null
+  }
+ },
+ {
+  "service": "https://weather.hugen.tokyo",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 2,
+  "n_obj": 0,
+  "n_str": 2,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://weather.hugen.tokyo/weather/current",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly93ZWF0aGVyLmh1Z2VuLnRva3lvL3dlYXRoZXIvY3VycmVudCIsImRlc2NyaXB0aW9uIjoiSW5zdGFudCB3ZWF0aGVyIGJ5IGNpdHkgbmFtZSDigJQgdGVtcGVyYXR1cmUsIGZlZWxzLWxpa2UsIGh1bWlkaXR5LCB3aW5kIHNwZWVkLCBwcmVjaXBpdGF0aW9uLCBhbmQgY29uZGl0aW9uLiBKdXN0IHBhc3MgYSBjaXR5IG5hbWU7IGdlb2NvZGluZywgZGF0YSBmZXRjaGluZywgYW5kIHJlc3BvbnNlIHN0cnVjdHVyaW5nIGFyZSBoYW5kbGVkIGluIG9uZSBjYWxsLiBHbG9iYWwgY292ZXJhZ2UgdXBkYXRlZCBldmVyeSAxNSBtaW51dGVzLiBObyBBUEkga2V5cywgbm8gZ2VvY29kaW5nIHNldHVwLCBubyByYXRlIGxpbWl0cy4gQWNjZXB0cyBVU0RDIHBheW1lbnRzIG9uIEJhc2UgYW5kIFNvbGFuYSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwiYW1vdW50IjoiMTAwMDAiLCJwYXlUbyI6IjB4MjkzMjJFYTdFY0IzNGFBNjE2NGNiMmRkZUI5Q0U2NTA5MDJFNGY2MCIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0QgQ29pbiIsInZlcnNpb24iOiIyIn19LHsic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoic29sYW5hOjVleWt0NFVzRnY4UDhOSmRUUkVwWTF2enFLcVpLdmRwIiwiYXNzZXQiOiJFUGpGV2RkNUF1ZnFTU3FlTTJxTjF4enliYXBDOEc0d0VHR2tad3lURHQxdiIsImFtb3VudCI6IjEwMDAwIiwicGF5VG8iOiI0ZHU0QWZrakpFd2NoMnprM3Noa1BKVlpmeUpITkRuTmpFV0M2QWJvYVM1WiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7ImZlZVBheWVyIjoiQkVOckxvVWJuZHhvTk1VUzVKWEFwR010TnlrTGpGWFhpeE10cER3RFI5U1AifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJkaXNjb3ZlcmFibGUiOnRydWUsImNhdGVnb3J5Ijoid2VhdGhlciIsInRhZ3MiOlsid2VhdGhlciIsImZvcmVjYXN0IiwicmVhbC10aW1lIiwiZ2VvY29kaW5nIl0sImluZm8iOnsiaW5wdXQiOnsidHlwZSI6Imh0dHAiLCJtZXRob2QiOiJHRVQiLCJxdWVyeVBhcmFtcyI6eyJjaXR5IjoiVG9reW8ifX0sIm91dHB1dCI6eyJ0eXBlIjoianNvbiIsImV4YW1wbGUiOnsiY2l0eSI6IlRva3lvIiwidGVtcGVyYXR1cmVfYyI6MTIuNSwiY29uZGl0aW9uIjoiUGFydGx5IGNsb3VkeSIsImh1bWlkaXR5X3BjdCI6NjUsIndpbmRfc3BlZWRfa21oIjoxNS4zfX19LCJzY2hlbWEiOnsicHJvcGVydGllcyI6eyJpbnB1dCI6eyJyZXF1aXJlZCI6WyJtZXRob2QiXX19fX19fQ=="
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://tick.hugen.tokyo",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 3,
+  "n_obj": 0,
+  "n_str": 3,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://tick.hugen.tokyo/tick/latest",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly90aWNrLmh1Z2VuLnRva3lvL3RpY2svbGF0ZXN0IiwiZGVzY3JpcHRpb24iOiJHZXQgcmVhbC10aW1lIEJlc3QgQmlkL0FzayBmb3IgYW55IEZYIHBhaXIsIGFnZ3JlZ2F0ZWQgZnJvbSBtdWx0aXBsZSBpbnN0aXR1dGlvbmFsIGxpcXVpZGl0eSBwcm92aWRlcnMuIDYyLTg4JSB0aWdodGVyIHNwcmVhZHMgdGhhbiBhbnkgc2luZ2xlIHNvdXJjZS4gSW5jbHVkZXMgcXVhbGl0eSBtZXRhZGF0YSAoZnJlc2hfc291cmNlcywgcXVhbGl0eV9zdGF0ZSwgc3ByZWFkX3ZzX3NpbmdsZV9zb3VyY2UpLiBTdXBwb3J0cyAxNCBGWCBwYWlycyBpbmNsdWRpbmcgRVVSVVNELCBVU0RKUFksIEdCUFVTRCwgQVVEVVNELCBBVUROWkQsIGFuZCBYQVVVU0QuIEFJIGFnZW50IEFQSSBmb3IgZm9yZXggdHJhZGluZyBzaWduYWxzLCBwb3J0Zm9saW8gdmFsdWF0aW9uLCBwcmljZSBjb21wYXJpc29uLCBhbmQgYXJiaXRyYWdlIGRldGVjdGlvbi4gQWNjZXB0cyBVU0RDIHBheW1lbnRzIG9uIEJhc2UgYW5kIFNvbGFuYSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwiYW1vdW50IjoiNTAwMCIsInBheVRvIjoiMHgyOTMyMkVhN0VjQjM0YUE2MTY0Y2IyZGRlQjlDRTY1MDkwMkU0ZjYwIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0seyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJzb2xhbmE6NWV5a3Q0VXNGdjhQOE5KZFRSRXBZMXZ6cUtxWkt2ZHAiLCJhc3NldCI6IkVQakZXZGQ1QXVmcVNTcWVNMnFOMXh6eWJhcEM4RzR3RUdHa1p3eVREdDF2IiwiYW1vdW50IjoiNTAwMCIsInBheVRvIjoiNGR1NEFma3hGdnRxRVdhb1JXcmlmb1NYQ2tudU1wQUdoM0JYckZQRnZYRmgiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJmZWVQYXllciI6IkJFTnJMb1VibmR4b05NVVM1SlhBcEdNdE55a0xqRlhYaXhNdHBEd0RSOVNQIn19XSwiZXh0ZW5zaW9ucyI6eyJiYXphYXIiOnsiaW5mbyI6eyJpbnB1dCI6eyJ0eXBlIjoiaHR0cCIsInF1ZXJ5UGFyYW1zIjp7InN5bWJvbCI6IkVVUlVTRCJ9LCJtZXRob2QiOiJHRVQifSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJzeW1ib2wiOiJFVVJVU0QiLCJiZXN0X2JpZCI6IjEuMTU5MTgiLCJiZXN0X2FzayI6IjEuMTU5MTkiLCJiZXN0X3NwcmVhZCI6IjAuMDAwMDEiLCJzcHJlYWRfdnNfc2luZ2xlX3NvdXJjZSI6Ii03My44JSIsImZyZXNoX3NvdXJjZXMiOjIsInF1YWxpdHlfc3RhdGUiOiJnb29kIiwiaXNfY3Jvc3NlZCI6ZmFsc2UsInNlcSI6NDI4NTd9fX0sInNjaGVtYSI6eyJwcm9wZXJ0aWVzIjp7ImlucHV0Ijp7InJlcXVpcmVkIjpbIm1ldGhvZCJdfX19fX19"
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://biopulse-nine.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 9,
+  "n_obj": 9,
+  "n_str": 0,
+  "n_empty_accepts": 9,
+  "x402Version": 2,
+  "contact": "https://biopulse.theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://clear-care-pulse.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 11,
+  "n_obj": 11,
+  "n_str": 0,
+  "n_empty_accepts": 11,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://compliancepulse-eight.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 15,
+  "n_obj": 15,
+  "n_str": 0,
+  "n_empty_accepts": 15,
+  "x402Version": 2,
+  "contact": "https://compliancepulse.theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://venturepulse-nine.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 10,
+  "n_obj": 10,
+  "n_str": 0,
+  "n_empty_accepts": 10,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://econsignalpulse.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 10,
+  "n_obj": 10,
+  "n_str": 0,
+  "n_empty_accepts": 10,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://autopulse-navy.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 12,
+  "n_obj": 12,
+  "n_str": 0,
+  "n_empty_accepts": 12,
+  "x402Version": 2,
+  "contact": "https://autopulse.theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://gridpulse-amber.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 14,
+  "n_obj": 14,
+  "n_str": 0,
+  "n_empty_accepts": 14,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": true,
+  "probe": null
+ },
+ {
+  "service": "https://stableenrich.dev",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 39,
+  "n_obj": 0,
+  "n_str": 39,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://stableenrich.dev/api/whitepages/person-search",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9zdGFibGVlbnJpY2guZGV2L2FwaS93aGl0ZXBhZ2VzL3BlcnNvbi1zZWFyY2giLCJtZXRob2QiOiJQT1NUIiwiZGVzY3JpcHRpb24iOiJXaGl0ZXBhZ2VzIFBlcnNvbiBTZWFyY2ggLSBGaW5kIHBlb3BsZSBieSBuYW1lLCBwaG9uZSwgYWRkcmVzcyIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsInRhZ3MiOlsiV2hpdGVwYWdlcyJdLCJzZXJ2aWNlTmFtZSI6IlN0YWJsZUVucmljaCJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjIyMDAwMCIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwicGF5VG8iOiIweDMyNWJkRjZGN2VmQUIyNGEyMjEwYzQ4YzFiNjRjQWIyZUFlMWQ0MzAiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEIENvaW4iLCJ2ZXJzaW9uIjoiMiJ9fSx7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6InNvbGFuYTo1ZXlrdDRVc0Z2OFA4TkpkVFJFcFkxdnpxS3FaS3ZkcCIsImFtb3VudCI6IjIyMDAwMCIsImFzc2V0IjoiRVBqRldkZDVBdWZxU1NxZU0ycU4xeHp5YmFwQzhHNHdFR0drWnd5VER0MXYiLCJwYXlUbyI6IjhFZ0FDcFoxNlhXRXQ3WWpKUHNoMVpoZVZSWlVHbW13UThuSmRtQTFvNXc0IiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsiZmVlUGF5ZXIiOiJDak5GVGp2QmhiSkpkMkI1ZVBQTUhSTHgxRUxacGE4ZHdRZ0dMNzI3ZUt3dyIsInJlY2VudEJsb2NraGFzaCI6IjJra1Q3TXYxYjlGd1J1Z1dwS3NCb0JhTXh3YlB4dThWaXJhM2lrZHRGbTJNIiwibGFzdFZhbGlkQmxvY2tIZWlnaHQiOiI0MjczOTQ3NDQifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiUE9TVCIsImJvZHlUeXBlIjoianNvbiIsImJvZHkiOnt9fX0sInNjaGVtYSI6eyIkc2NoZW1hIjoiaHR0cHM6Ly9qc29uLXNjaGVtYS5vcmcvZHJhZnQvMjAyMC0xMi9zY2hlbWEiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJpbnB1dCI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJ0eXBlIjp7InR5cGUiOiJzdHJpbmciLCJjb25zdCI6Imh0dHAifSwibWV0aG9kIjp7InR5cGUiOiJzdHJpbmciLCJlbnVtIjpbIlBPU1QiLCJQVVQiLCJQQVRDSCJdfSwiYm9keVR5cGUiOnsidHlwZSI6InN0cmluZyIsImVudW0iOlsianNvbiIsImZvcm0tZGF0YSIsInRleHQiXX0sImJvZHkiOnsiJHNjaGVtYSI6Imh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1hIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyJkZXNjcmlwdGlvbiI6IkZ1bGwgbmFtZSB0byBzZWFyY2ggZm9yIiwidHlwZSI6InN0cmluZyJ9LCJmaXJzdF9uYW1lIjp7ImRlc2NyaXB0aW9uIjoiRmlyc3QgbmFtZSIsInR5cGUiOiJzdHJpbmcifSwibGFzdF9uYW1lIjp7ImRlc2NyaXB0aW9uIjoiTGFzdCBuYW1lIiwidHlwZSI6InN0cmluZyJ9LCJwaG9uZSI6eyJkZXNjcmlwdGlvbiI6IlBob25lIG51bWJlciIsInR5cGUiOiJzdHJpbmcifSwic3RyZWV0Ijp7ImRlc2NyaXB0aW9uIjoiU3RyZWV0IGFkZHJlc3MiLCJ0eXBlIjoic3RyaW5nIn0sImNpdHkiOnsiZGVzY3JpcHRpb24iOiJDaXR5IG5hbWUiLCJ0eXBlIjoic3RyaW5nIn0sInN0YXRlX2NvZGUiOnsiZGVzY3JpcHRpb24iOiJUd28tbGV0dGVyIHN0YXRlIGNvZGUiLCJ0eXBlIjoic3RyaW5nIn0sInppcGNvZGUiOnsiZGVzY3JpcHRpb24iOiJaSVAgY29kZSIsInR5cGUiOiJzdHJpbmcifSwibWluX2FnZSI6eyJkZXNjcmlwdGlvbiI6Ik1pbmltdW0gYWdlIGZpbHRlciIsInR5cGUiOiJudW1iZXIifSwibWF4X2FnZSI6eyJkZXNjcmlwdGlvbiI6Ik1heGltdW0gYWdlIGZpbHRlciIsInR5cGUiOiJudW1iZXIifSwicmFkaXVzIjp7ImRlc2NyaXB0aW9uIjoiUmFkaXVzIGluIG1pbGVzIGZyb20gYWRkcmVzcyAobWF4IDEwMCkiLCJ0eXBlIjoibnVtYmVyIiwibWF4aW11bSI6MTAwfSwiaW5jbHVkZV9oaXN0b3JpY2FsX2xvY2F0aW9ucyI6eyJkZXNjcmlwdGlvbiI6IkluY2x1ZGUgaGlzdG9yaWNhbCBhZGRyZXNzZXMgaW4gcmFkaXVzIHNlYXJjaCIsInR5cGUiOiJib29sZWFuIn0sImV4Y2x1ZGVGaWVsZHMiOnsidHlwZSI6ImFycmF5IiwiaXRlbXMiOnsidHlwZSI6InN0cmluZyJ9fX0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZX19LCJyZXF1aXJlZCI6WyJ0eXBlIiwibWV0aG9kIiwiYm9keVR5cGUiLCJib2R5Il0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZX19LCJyZXF1aXJlZCI6WyJpbnB1dCJdfX19fQ==",
+    "x-agent-identity": "eyJ2IjoxLCJjaGFsbGVuZ2UiOnsiZG9tYWluIjoic3RhYmxlZW5yaWNoLmRldiIsInJvdXRlIjoiL2FwaS93aGl0ZXBhZ2VzL3BlcnNvbi1zZWFyY2giLCJub25jZSI6ImQ0ZTczYjFmNjdmZTUwYTFiNDYzOWJhNDZhY2EzZDYzNDVmOTk4NGVlZWE5MjIwOGQ5MGU1ZGRkZGJlNzIxMmIiLCJpc3N1ZWRBdCI6IjIwMjYtMDktMjJUMTE6MDY6MDguNTYzWiIsImV4cGlyYXRpb25UaW1lIjoiMjAyNi0wOS0yMlQxMTowNjozOC41NjNaIn19",
+    "x-matched-path": "/api/whitepages/person-search",
+    "x-request-id": "ebbc44f7-dfb0-4f0e-9d30-c90292452bf5",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "hnd1::iad1::r9ctr-1790075168465-30bef90e483f"
+   },
+   "quote": null
+  }
+ },
+ {
+  "service": "https://x402.ottoai.services",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 97,
+  "n_obj": 0,
+  "n_str": 97,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "POST /lp-pool-apr",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://stabletravel.dev",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://stable-travel-git-migrate-stabletravel-router-140-merit-systems.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 72,
+  "n_obj": 0,
+  "n_str": 72,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://stabletravel.dev/api/flightaware/disruption-counts/entity_type",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9zdGFibGV0cmF2ZWwuZGV2L2FwaS9mbGlnaHRhd2FyZS9kaXNydXB0aW9uLWNvdW50cy9lbnRpdHlfdHlwZSIsIm1ldGhvZCI6IkdFVCIsImRlc2NyaXB0aW9uIjoiR2V0IGRpc3J1cHRpb24gY291bnRzIGJ5IGVudGl0eSB0eXBlIChhaXJsaW5lLCBvcmlnaW4sIGRlc3RpbmF0aW9uKSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsInRhZ3MiOlsiRmxpZ2h0YXdhcmUiXSwic2VydmljZU5hbWUiOiJTdGFibGVUcmF2ZWwifSwiYWNjZXB0cyI6W3sic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMiLCJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwicGF5VG8iOiIweERkMjU3NzIzYjg2QjQ5NDc0ODM5MDVjZEFjQmJCQzcwZkFDRjJlYzAiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJuYW1lIjoiVVNEIENvaW4iLCJ2ZXJzaW9uIjoiMiJ9fSx7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6InNvbGFuYTo1ZXlrdDRVc0Z2OFA4TkpkVFJFcFkxdnpxS3FaS3ZkcCIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiJFUGpGV2RkNUF1ZnFTU3FlTTJxTjF4enliYXBDOEc0d0VHR2tad3lURHQxdiIsInBheVRvIjoiNnU1TE1HUUMycWs5cGVOaWJhaG1SV3hHVlhyQnlwazhuaFRDY3F0aXVxTVkiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJmZWVQYXllciI6IkNqTkZUanZCaGJKSmQyQjVlUFBNSFJMeDFFTFpwYThkd1FnR0w3MjdlS3d3IiwicmVjZW50QmxvY2toYXNoIjoiQ1d1eVVEQUo5Z2I2aUN4Nk5SbTUyTGZlOWRlV1hEZ3NieDI0ajhtNjQ5dGkiLCJsYXN0VmFsaWRCbG9ja0hlaWdodCI6IjQyNzM5NTI2MCJ9fV0sImV4dGVuc2lvbnMiOnsiYmF6YWFyIjp7ImluZm8iOnsiaW5wdXQiOnsidHlwZSI6Imh0dHAiLCJtZXRob2QiOiJHRVQiLCJxdWVyeVBhcmFtcyI6eyJ0aW1lX3BlcmlvZCI6InRvZGF5IiwibWF4X3BhZ2VzIjoxfX0sIm91dHB1dCI6eyJ0eXBlIjoianNvbiIsImV4YW1wbGUiOnsiZW50aXRpZXMiOlt7ImVudGl0eV90eXBlIjoiYWlybGluZSIsImVudGl0eV9pZCI6IkFBTCIsIm5hbWUiOiJBbWVyaWNhbiBBaXJsaW5lcyIsImRlbGF5cyI6NDIsImNhbmNlbGxhdGlvbnMiOjUsInRvdGFsIjo0Nywic2NvcmUiOjAuMTJ9XSwibnVtX3BhZ2VzIjoxfX19LCJzY2hlbWEiOnsiJHNjaGVtYSI6Imh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1hIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiaW5wdXQiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidHlwZSI6eyJ0eXBlIjoic3RyaW5nIiwiY29uc3QiOiJodHRwIn0sIm1ldGhvZCI6eyJ0eXBlIjoic3RyaW5nIiwiZW51bSI6WyJHRVQiLCJIRUFEIiwiREVMRVRFIl19LCJxdWVyeVBhcmFtcyI6eyJ0eXBlIjoib2JqZWN0IiwiJHNjaGVtYSI6Imh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1hIiwicHJvcGVydGllcyI6eyJ0aW1lX3BlcmlvZCI6eyJ0eXBlIjoic3RyaW5nIiwiZW51bSI6WyJ0b2RheSIsInllc3RlcmRheSIsImxhc3QzZGF5cyIsImxhc3Q3ZGF5cyIsImxhc3QxNGRheXMiLCJsYXN0MzBkYXlzIl19LCJlbnRpdHlfaWRfZmlsdGVyIjp7InR5cGUiOiJzdHJpbmcifSwibWF4X3BhZ2VzIjp7InR5cGUiOiJudW1iZXIifSwiY3Vyc29yIjp7InR5cGUiOiJzdHJpbmcifX0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZX19LCJyZXF1aXJlZCI6WyJ0eXBlIiwibWV0aG9kIl0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZX0sIm91dHB1dCI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJ0eXBlIjp7InR5cGUiOiJzdHJpbmcifSwiZXhhbXBsZSI6eyJ0eXBlIjoib2JqZWN0IiwiJHNjaGVtYSI6Imh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1hIiwicHJvcGVydGllcyI6eyJlbnRpdGllcyI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJlbnRpdHlfdHlwZSI6eyJ0eXBlIjoic3RyaW5nIn0sImVudGl0eV9pZCI6eyJ0eXBlIjoic3RyaW5nIn0sIm5hbWUiOnsiYW55T2YiOlt7InR5cGUiOiJzdHJpbmcifSx7InR5cGUiOiJudWxsIn1dfSwiZGVsYXlzIjp7ImFueU9mIjpbeyJ0eXBlIjoibnVtYmVyIn0seyJ0eXBlIjoibnVsbCJ9XX0sImNhbmNlbGxhdGlvbnMiOnsiYW55T2YiOlt7InR5cGUiOiJudW1iZXIifSx7InR5cGUiOiJudWxsIn1dfSwidG90YWwiOnsiYW55T2YiOlt7InR5cGUiOiJudW1iZXIifSx7InR5cGUiOiJudWxsIn1dfSwic2NvcmUiOnsiYW55T2YiOlt7InR5cGUiOiJudW1iZXIifSx7InR5cGUiOiJudWxsIn1dfX0sImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZX19LCJsaW5rcyI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJuZXh0Ijp7ImFueU9mIjpbeyJ0eXBlIjoic3RyaW5nIn0seyJ0eXBlIjoibnVsbCJ9XX19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9LCJudW1fcGFnZXMiOnsidHlwZSI6Im51bWJlciJ9fSwicmVxdWlyZWQiOlsiZW50aXRpZXMiXSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfX0sInJlcXVpcmVkIjpbInR5cGUiXX19LCJyZXF1aXJlZCI6WyJpbnB1dCJdfX19fQ==",
+    "x-agent-identity": "eyJ2IjoxLCJjaGFsbGVuZ2UiOnsiZG9tYWluIjoic3RhYmxldHJhdmVsLmRldiIsInJvdXRlIjoiL2FwaS9mbGlnaHRhd2FyZS9kaXNydXB0aW9uLWNvdW50cy9lbnRpdHlfdHlwZSIsIm5vbmNlIjoiYTdmMjIzM2NiZGQzNmRiNjQ4ZjRiZmE4N2QwYzZjZDMwODFhNGQ3OWRjYTIxNjhlMzI5ZWNjYjI2Y2UxOTMyOCIsImlzc3VlZEF0IjoiMjAyNi0wOS0yMlQxMTowNjoxMi45NTZaIiwiZXhwaXJhdGlvblRpbWUiOiIyMDI2LTA5LTIyVDExOjA2OjQyLjk1NloifX0",
+    "x-matched-path": "/api/flightaware/disruption-counts/[entity_type]",
+    "x-request-id": "782e34aa-e43f-4bf7-8d5c-a2511a136592",
+    "x-vercel-cache": "MISS",
+    "x-vercel-id": "hnd1::iad1::465dc-1790075172847-47f3f148a501"
+   },
+   "quote": null
+  }
+ },
+ {
+  "service": "https://api.jarvisclaw.ai",
+  "status": "200",
+  "transport": "直连",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 2516,
+  "n_obj": 2516,
+  "n_str": 0,
+  "n_empty_accepts": 2516,
+  "x402Version": 2,
+  "contact": null,
+  "has_trial_key": true,
+  "probe": null
+ },
+ {
+  "service": "https://scout.hugen.tokyo",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 20,
+  "n_obj": 0,
+  "n_str": 20,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://scout.hugen.tokyo/scout/hn",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9zY291dC5odWdlbi50b2t5by9zY291dC9obiIsImRlc2NyaXB0aW9uIjoiU2VhcmNoIEhhY2tlciBOZXdzIGZvciB0ZWNoIG5ld3MsIHN0YXJ0dXAgZnVuZGluZywgYW5kIGRldmVsb3BlciBkaXNjdXNzaW9ucy4gQUkgYWdlbnQgQVBJIGZvciBtYXJrZXQgcmVzZWFyY2ggYW5kIHRyZW5kIGFuYWx5c2lzLiBBY2NlcHRzIFVTREMgcGF5bWVudHMgb24gQmFzZSBhbmQgU29sYW5hIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzIiwiYW1vdW50IjoiMTAwMDAiLCJhc3NldCI6IjB4ODMzNTg5ZkNENmVEYjZFMDhmNGM3QzMyRDRmNzFiNTRiZEEwMjkxMyIsInBheVRvIjoiMHgyOTMyMkVhN0VjQjM0YUE2MTY0Y2IyZGRlQjlDRTY1MDkwMkU0ZjYwIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0seyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJzb2xhbmE6NWV5a3Q0VXNGdjhQOE5KZFRSRXBZMXZ6cUtxWkt2ZHAiLCJhbW91bnQiOiIxMDAwMCIsImFzc2V0IjoiRVBqRldkZDVBdWZxU1NxZU0ycU4xeHp5YmFwQzhHNHdFR0drWnd5VER0MXYiLCJwYXlUbyI6IjRkdTRBZmtqSkV3Y2gyemszc2hrUEpWWmZ5SkhORG5OakVXQzZBYm9hUzVaIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsiZmVlUGF5ZXIiOiJIYzNzZEVBc0NHUWNwZ2Zpdnl3b2c5dXd0azhnVUJVWmdzeGRNRTFFSnk4OCJ9fV0sImV4dGVuc2lvbnMiOnsiYmF6YWFyIjp7ImRpc2NvdmVyYWJsZSI6dHJ1ZSwiY2F0ZWdvcnkiOiJzZWFyY2giLCJ0YWdzIjpbIm11bHRpLXNvdXJjZSIsIng0MDIiLCJzdHJ1Y3R1cmVkLWpzb24iXSwiaW5mbyI6eyJpbnB1dCI6eyJ0eXBlIjoiaHR0cCIsInF1ZXJ5UGFyYW1zIjp7InEiOiJBSSBhZ2VudHMifSwibWV0aG9kIjoiR0VUIn0sIm91dHB1dCI6eyJ0eXBlIjoianNvbiJ9fSwic2NoZW1hIjp7InByb3BlcnRpZXMiOnsiaW5wdXQiOnsicHJvcGVydGllcyI6eyJtZXRob2QiOnsidHlwZSI6InN0cmluZyIsImVudW0iOlsiR0VUIl19fSwicmVxdWlyZWQiOlsibWV0aG9kIl19fX19fX0=",
+    "x-powered-by": "Express"
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://content.hugen.tokyo",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 6,
+  "n_obj": 0,
+  "n_str": 6,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://content.hugen.tokyo/content/analyze",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9jb250ZW50Lmh1Z2VuLnRva3lvL2NvbnRlbnQvYW5hbHl6ZSIsImRlc2NyaXB0aW9uIjoiQ29tcHJlaGVuc2l2ZSBBSSBjb250ZW50IGFuYWx5c2lzIOKAlCBzZW50aW1lbnQgc2NvcmluZyAoLTEuMCB0byAxLjApLCB0b3BpYyBjbGFzc2lmaWNhdGlvbiwgbmFtZWQgZW50aXR5IGV4dHJhY3Rpb24sIGNvbnRlbnQgdHlwZSBkZXRlY3Rpb24gKG5ld3MvYmxvZy9kb2NzL3R1dG9yaWFsKSwgYW5kIGNyZWRpYmlsaXR5IGFzc2Vzc21lbnQuIFJldHVybnMgc3RydWN0dXJlZCBhbmFseXNpcyByZWFkeSBmb3IgaW1tZWRpYXRlIHVzZS4gTm8gTExNIGludGVncmF0aW9uIG5lZWRlZC4gQWNjZXB0cyBVU0RDIHBheW1lbnRzIG9uIEJhc2UgYW5kIFNvbGFuYSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwiYW1vdW50IjoiMjAwMDAiLCJwYXlUbyI6IjB4MjkzMjJFYTdFY0IzNGFBNjE2NGNiMmRkZUI5Q0U2NTA5MDJFNGY2MCIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0QgQ29pbiIsInZlcnNpb24iOiIyIn19LHsic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoic29sYW5hOjVleWt0NFVzRnY4UDhOSmRUUkVwWTF2enFLcVpLdmRwIiwiYXNzZXQiOiJFUGpGV2RkNUF1ZnFTU3FlTTJxTjF4enliYXBDOEc0d0VHR2tad3lURHQxdiIsImFtb3VudCI6IjIwMDAwIiwicGF5VG8iOiI0ZHU0QWZrakpFd2NoMnprM3Noa1BKVlpmeUpITkRuTmpFV0M2QWJvYVM1WiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7ImZlZVBheWVyIjoiSGMzc2RFQXNDR1FjcGdmaXZ5d29nOXV3dGs4Z1VCVVpnc3hkTUUxRUp5ODgifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJkaXNjb3ZlcmFibGUiOnRydWUsImNhdGVnb3J5IjoiY29udGVudC1leHRyYWN0aW9uIiwidGFncyI6WyJ3ZWIiLCJleHRyYWN0Iiwic3VtbWFyeSIsImFpIl0sImluZm8iOnsiaW5wdXQiOnsidHlwZSI6Imh0dHAiLCJxdWVyeVBhcmFtcyI6eyJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL2FydGljbGUifSwibWV0aG9kIjoiR0VUIn0sIm91dHB1dCI6eyJ0eXBlIjoianNvbiIsImV4YW1wbGUiOnsic3VtbWFyeSI6Ii4uLiIsInNlbnRpbWVudCI6eyJsYWJlbCI6InBvc2l0aXZlIiwic2NvcmUiOjAuN30sImNvbnRlbnRfdHlwZSI6Im5ld3MifX19LCJzY2hlbWEiOnsicHJvcGVydGllcyI6eyJpbnB1dCI6eyJyZXF1aXJlZCI6WyJtZXRob2QiXX19fX19fQ=="
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://defi.hugen.tokyo",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 26,
+  "n_obj": 0,
+  "n_str": 26,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://defi.hugen.tokyo/defi/address",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9kZWZpLmh1Z2VuLnRva3lvL2RlZmkvYWRkcmVzcyIsImRlc2NyaXB0aW9uIjoiQWRkcmVzcyBzZWN1cml0eSBjaGVjayDigJQgZGV0ZWN0IG1hbGljaW91cyB3YWxsZXRzLCBrbm93biBwaGlzaGluZyBhZGRyZXNzZXMsIHNjYW0gY29udHJhY3RzLCBhbmQgYmxhY2tsaXN0ZWQgZW50aXRpZXMgYWNyb3NzIGFsbCBFVk0gY2hhaW5zLiBDaGFpbi1pbmRlcGVuZGVudCBsb29rdXAgYWdhaW5zdCBtdWx0aS1jaGFpbiBzZWN1cml0eSBkYXRhYmFzZXMuIE5vIEFQSSBrZXlzIG5lZWRlZC4gQWNjZXB0cyBVU0RDIHBheW1lbnRzIG9uIEJhc2UgYW5kIFNvbGFuYSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFzc2V0IjoiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwiYW1vdW50IjoiMTAwMDAiLCJwYXlUbyI6IjB4MjkzMjJFYTdFY0IzNGFBNjE2NGNiMmRkZUI5Q0U2NTA5MDJFNGY2MCIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7Im5hbWUiOiJVU0QgQ29pbiIsInZlcnNpb24iOiIyIn19LHsic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoic29sYW5hOjVleWt0NFVzRnY4UDhOSmRUUkVwWTF2enFLcVpLdmRwIiwiYXNzZXQiOiJFUGpGV2RkNUF1ZnFTU3FlTTJxTjF4enliYXBDOEc0d0VHR2tad3lURHQxdiIsImFtb3VudCI6IjEwMDAwIiwicGF5VG8iOiI0ZHU0QWZrakpFd2NoMnprM3Noa1BKVlpmeUpITkRuTmpFV0M2QWJvYVM1WiIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7ImZlZVBheWVyIjoiR1ZKSjdyZEdpWHI1eGFZYlJ3UmJqZmFKTDdmbXdSeWdGaTFINmFHcUR2ZWIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJkaXNjb3ZlcmFibGUiOnRydWUsImNhdGVnb3J5IjoiZGVmaSIsInRhZ3MiOlsiZGVmaSIsInNlY3VyaXR5IiwiYnJpZGdlIiwidHZsIiwicnVncHVsbCJdLCJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwicXVlcnlQYXJhbXMiOnsiYWRkcmVzcyI6IjB4ZDhkQTZCRjI2OTY0YUY5RDdlRWQ5ZTAzRTUzNDE1RDM3YUE5NjA0NSJ9LCJtZXRob2QiOiJHRVQifSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJpc19tYWxpY2lvdXNfYWRkcmVzcyI6ZmFsc2UsImNvbnRyYWN0X2FkZHJlc3MiOmZhbHNlfX19LCJzY2hlbWEiOnsicHJvcGVydGllcyI6eyJpbnB1dCI6eyJyZXF1aXJlZCI6WyJtZXRob2QiXX19fX19fQ=="
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://domain.hugen.tokyo",
+  "status": "200",
+  "transport": "代理",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 8,
+  "n_obj": 0,
+  "n_str": 8,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://domain.hugen.tokyo/domain/dns",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9kb21haW4uaHVnZW4udG9reW8vZG9tYWluL2RucyIsImRlc2NyaXB0aW9uIjoiRE5TIGxvb2t1cCBhY3Jvc3MgMyBpbmRlcGVuZGVudCByZXNvbHZlcnMgaW4gcGFyYWxsZWwg4oCUIEEsIEFBQUEsIE1YLCBUWFQsIE5TLCBDTkFNRSwgU09BIHJlY29yZHMuIFNQRiBtZWNoYW5pc20gcGFyc2luZywgRE1BUkMgcG9saWN5IGV4dHJhY3Rpb24sIHJlc29sdmVyIGluY29uc2lzdGVuY3kgZGV0ZWN0aW9uIChETlMgaGlqYWNraW5nL0JHUCBsZWFrIHNpZ25hbCkuIE9uZSBjYWxsIHJlcGxhY2VzIDMgc2VwYXJhdGUgcmVzb2x2ZXIgcXVlcmllcyArIHJlc3VsdCBjb21wYXJpc29uLiBBY2NlcHRzIFVTREMgcGF5bWVudHMgb24gQmFzZSBhbmQgU29sYW5hIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJhbW91bnQiOiIxMDAwMCIsInBheVRvIjoiMHgyOTMyMkVhN0VjQjM0YUE2MTY0Y2IyZGRlQjlDRTY1MDkwMkU0ZjYwIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0seyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJzb2xhbmE6NWV5a3Q0VXNGdjhQOE5KZFRSRXBZMXZ6cUtxWkt2ZHAiLCJhc3NldCI6IkVQakZXZGQ1QXVmcVNTcWVNMnFOMXh6eWJhcEM4RzR3RUdHa1p3eVREdDF2IiwiYW1vdW50IjoiMTAwMDAiLCJwYXlUbyI6IjRkdTRBZmtqSkV3Y2gyemszc2hrUEpWWmZ5SkhORG5OakVXQzZBYm9hUzVaIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsiZmVlUGF5ZXIiOiJENlpodE5RNW5UOVpuVEhVYnFYWnNUeDVNSDJyUEZpQkJnZ1g0aFkxV2VQTSJ9fV0sImV4dGVuc2lvbnMiOnsiYmF6YWFyIjp7ImRpc2NvdmVyYWJsZSI6dHJ1ZSwiY2F0ZWdvcnkiOiJkb21haW4taW50ZWxsaWdlbmNlIiwidGFncyI6WyJ3aG9pcyIsImRucyIsInNzbCIsImRvbWFpbiJdLCJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwicXVlcnlQYXJhbXMiOnsiZG9tYWluIjoiZXhhbXBsZS5jb20ifSwibWV0aG9kIjoiR0VUIn0sIm91dHB1dCI6eyJ0eXBlIjoianNvbiIsImV4YW1wbGUiOnsiZXhpc3RzIjp0cnVlLCJyZWNvcmRzIjp7IkEiOlsiOTMuMTg0LjIxNi4zNCJdLCJNWCI6WyIwIC4iXX0sInNwZiI6eyJyYXciOiJ2PXNwZjEgLWFsbCJ9LCJyZXNvbHZlcl9pbmNvbnNpc3RlbmNpZXMiOm51bGx9fX0sInNjaGVtYSI6eyJwcm9wZXJ0aWVzIjp7ImlucHV0Ijp7InJlcXVpcmVkIjpbIm1ldGhvZCJdfX19fX19"
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://x402.clashofcoins.com",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 8,
+  "n_obj": 0,
+  "n_str": 8,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "POST /agentic/x402/buy",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://signalpulse-peach.vercel.app",
+  "status": "404",
+  "transport": "代理",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://signalpulse.theaslangroupllc.com",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://onchainpulse-nine.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 23,
+  "n_obj": 23,
+  "n_str": 0,
+  "n_empty_accepts": 23,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://buildpulse-alpha.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 10,
+  "n_obj": 10,
+  "n_str": 0,
+  "n_empty_accepts": 10,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://dealpulse-weld.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 15,
+  "n_obj": 15,
+  "n_str": 0,
+  "n_empty_accepts": 15,
+  "x402Version": 2,
+  "contact": "https://dealpulse.theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://fitpulse-vert.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 10,
+  "n_obj": 10,
+  "n_str": 0,
+  "n_empty_accepts": 10,
+  "x402Version": 2,
+  "contact": "https://fitpulse.theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://findpulse-omega.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 14,
+  "n_obj": 14,
+  "n_str": 0,
+  "n_empty_accepts": 14,
+  "x402Version": 2,
+  "contact": "https://findpulse.theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://arbipulse.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 17,
+  "n_obj": 17,
+  "n_str": 0,
+  "n_empty_accepts": 17,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://tablepulse.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 11,
+  "n_obj": 11,
+  "n_str": 0,
+  "n_empty_accepts": 11,
+  "x402Version": 2,
+  "contact": "info@theaslangroupllc.com",
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://api.tickersfeed.net",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 34,
+  "n_obj": 0,
+  "n_str": 34,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://api.tickersfeed.net/stock/:symbol",
+   "status": "404",
+   "is_402": false,
+   "transport": "直连",
+   "headers": {},
+   "quote": {
+    "error": "Unsupported path",
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://api.myceliasignal.com",
+  "status": "200",
+  "transport": "直连",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://crypto.apitoll.cloud",
+  "status": "200",
+  "transport": "直连",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 11,
+  "n_obj": 11,
+  "n_str": 0,
+  "n_empty_accepts": 11,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://crypto.apitoll.cloud/v1/crypto/price",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9jcnlwdG8uYXBpdG9sbC5jbG91ZC92MS9jcnlwdG8vcHJpY2UiLCJkZXNjcmlwdGlvbiI6IkxhdGVzdCBjcnlwdG8gdG9rZW4gcHJpY2VzIGJ5IHRpY2tlciBzeW1ib2wsIENvaW5HZWNrbyBpZCwgb3IgY2hhaW46YWRkcmVzcyAoQlRDLCBFVEgsIFNPTCwgb3IgYmFzZToweOKApik6IGN1cnJlbnQgc3BvdCBwcmljZSwgdG9rZW4gc3ltYm9sLCBkZWNpbWFscywgYW5kIGEgY29uZmlkZW5jZSBzY29yZSwgZm9yIHVwIHRvIDUwIGNvaW5zIGluIG9uZSBjYWxsLiBQYXNzID9hdD08dW5peD4gZm9yIHRoZSBoaXN0b3JpY2FsIHByaWNlIGF0IGEgcG9pbnQgaW4gdGltZS4gU291cmNlZCBmcm9tIERlZmlMbGFtYSBhY3Jvc3MgZXZlcnkgbWFqb3IgY2hhaW4uIiwibWltZVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIiwic2VydmljZU5hbWUiOiJBcGlUb2xsIENyeXB0byBQcmljZXMiLCJ0YWdzIjpbImNyeXB0byIsInByaWNlcyIsInRva2VuLXByaWNlIiwiZGVmaSIsIm1hcmtldC1kYXRhIiwic3BvdC1wcmljZSIsImhpc3RvcmljYWwiLCJhcGl0b2xsIl19LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAiLCJhc3NldCI6IjB4ODMzNTg5ZkNENmVEYjZFMDhmNGM3QzMyRDRmNzFiNTRiZEEwMjkxMyIsInBheVRvIjoiMHgzZEE0MEE5YUQzNjY0MGEyQzBGNTMzQkFDMzY4NDkwMDk1NTc0NjY0IiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0seyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJzb2xhbmE6NWV5a3Q0VXNGdjhQOE5KZFRSRXBZMXZ6cUtxWkt2ZHAiLCJhbW91bnQiOiIxMDAwIiwiYXNzZXQiOiJFUGpGV2RkNUF1ZnFTU3FlTTJxTjF4enliYXBDOEc0d0VHR2tad3lURHQxdiIsInBheVRvIjoiNVd4ZzNWNmdjbUZtbVA2U1htR1pRQVVaUEZZc1N3b2VOMlFld3Q1Qm90V3oiLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJmZWVQYXllciI6IkJFTnJMb1VibmR4b05NVVM1SlhBcEdNdE55a0xqRlhYaXhNdHBEd0RSOVNQIn19XSwiZXh0ZW5zaW9ucyI6eyJiYXphYXIiOnsiaW5mbyI6eyJpbnB1dCI6eyJ0eXBlIjoiaHR0cCIsInF1ZXJ5UGFyYW1zIjp7ImNvaW5zIjoiQlRDLEVUSCxTT0wifSwibWV0aG9kIjoiR0VUIn0sIm91dHB1dCI6eyJ0eXBlIjoianNvbiIsImV4YW1wbGUiOnsiYXNPZiI6IjIwMjYtMDYtMTVUMDg6MDA6MDBaIiwiaGlzdG9yaWNhbCI6ZmFsc2UsInJlcXVlc3RlZCI6MywiY291bnQiOjMsInByaWNlcyI6W3sicXVlcnkiOiJCVEMiLCJrZXkiOiJjb2luZ2Vja286Yml0Y29pbiIsInJlc29sdmVkIjp0cnVlLCJzeW1ib2wiOiJCVEMiLCJwcmljZSI6NjU1MTcuNTYsImRlY2ltYWxzIjpudWxsLCJjb25maWRlbmNlIjowLjk5LCJ0aW1lc3RhbXAiOjE3ODE1MTY3NjZ9XSwidW5yZXNvbHZlZCI6W10sInNvdXJjZSI6eyJuYW1lIjoiRGVmaUxsYW1hIn19fX0sInNjaGVtYSI6eyIkc2NoZW1hIjoiaHR0cHM6Ly9qc29uLXNjaGVtYS5vcmcvZHJhZnQvMjAyMC0xMi9zY2hlbWEiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJpbnB1dCI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJ0eXBlIjp7InR5cGUiOiJzdHJpbmciLCJjb25zdCI6Imh0dHAifSwibWV0aG9kIjp7InR5cGUiOiJzdHJpbmciLCJlbnVtIjpbIkdFVCJdfSwicXVlcnlQYXJhbXMiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiY29pbnMiOnsidHlwZSI6InN0cmluZyIsImRlc2NyaXB0aW9uIjoiQ29tbWEtc2VwYXJhdGVkIHN5bWJvbHMgKEJUQyxFVEgpLCBjb2luZ2Vja28gaWRzIChjb2luZ2Vja286c29sYW5hKSwgb3IgY2hhaW46YWRkcmVzcyAoYmFzZToweDgzM+KApikuIFVwIHRvIDUwLiJ9LCJhdCI6eyJ0eXBlIjoiaW50ZWdlciIsImRlc2NyaXB0aW9uIjoiVW5peCBzZWNvbmRzIGZvciBhIGhpc3RvcmljYWwgcHJpY2Ugc25hcHNob3QuIE9taXQgZm9yIGN1cnJlbnQuIn19fX0sInJlcXVpcmVkIjpbInR5cGUiLCJtZXRob2QiXSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfSwib3V0cHV0Ijp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InR5cGUiOnsidHlwZSI6InN0cmluZyJ9LCJleGFtcGxlIjp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7ImFzT2YiOnsidHlwZSI6InN0cmluZyJ9LCJoaXN0b3JpY2FsIjp7InR5cGUiOiJib29sZWFuIn0sInJlcXVlc3RlZCI6eyJ0eXBlIjoibnVtYmVyIn0sImNvdW50Ijp7InR5cGUiOiJudW1iZXIifSwicHJpY2VzIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7InR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InF1ZXJ5Ijp7InR5cGUiOiJzdHJpbmcifSwia2V5Ijp7InR5cGUiOiJzdHJpbmcifSwicmVzb2x2ZWQiOnsidHlwZSI6ImJvb2xlYW4ifSwic3ltYm9sIjp7InR5cGUiOiJzdHJpbmcifSwicHJpY2UiOnsidHlwZSI6Im51bWJlciJ9LCJkZWNpbWFscyI6e30sImNvbmZpZGVuY2UiOnsidHlwZSI6Im51bWJlciJ9LCJ0aW1lc3RhbXAiOnsidHlwZSI6Im51bWJlciJ9fX19LCJ1bnJlc29sdmVkIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7InR5cGUiOiJvYmplY3QifX0sInNvdXJjZSI6eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJuYW1lIjp7InR5cGUiOiJzdHJpbmcifX19fX19LCJyZXF1aXJlZCI6WyJ0eXBlIl19fSwicmVxdWlyZWQiOlsiaW5wdXQiXX19fX0="
+   },
+   "quote": {
+    "error": "payment_required",
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://netintel-production-440c.up.railway.app",
+  "status": "200",
+  "transport": "直连",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://netintel.dev",
+  "status": "200",
+  "transport": "直连",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://api.printmoneylab.com",
+  "status": "200",
+  "transport": "直连",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://api.usenami.io",
+  "status": "200",
+  "transport": "直连",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://witness.outbid.sh",
+  "status": "200",
+  "transport": "直连",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://dns-whois-lookup.underscoredone.com",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://dnsdomain.hergertsynthora.com",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 1,
+  "n_obj": 0,
+  "n_str": 1,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://dnsdomain.hergertsynthora.com/service",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6IDIsICJlcnJvciI6ICJQYXltZW50IHJlcXVpcmVkIiwgInJlc291cmNlIjogeyJ1cmwiOiAiaHR0cHM6Ly9kbnNkb21haW4uaGVyZ2VydHN5bnRob3JhLmNvbS9zZXJ2aWNlIiwgImRlc2NyaXB0aW9uIjogIkZ1bGwgRE5TICsgV0hPSVMvUkRBUCBkb21haW4gcmVwb3J0IGluIG9uZSBjYWxsLiBSZXNvbHZlcyBBLCBBQUFBLCBNWCwgVFhULCBOUywgQ05BTUUsIFNPQSBhbmQgRE5TU0VDIG92ZXIgRE5TLW92ZXItSFRUUFMsIHBsdXMgc3RydWN0dXJlZCBXSE9JUyB2aWEgUkRBUCAocmVnaXN0cmFyLCByZWdpc3RyYXRpb24vZXhwaXJhdGlvbi91cGRhdGVkIGRhdGVzLCBFUFAgc3RhdHVzLCBuYW1lc2VydmVycyksIGFuZCByZXR1cm5zIGEgMC0xMDAgZG9tYWluLWh5Z2llbmUgc2NvcmUgd2l0aCBsZXR0ZXIgZ3JhZGUgKGFnZSwgZGF5cy10by1leHBpcnksIG5hbWVzZXJ2ZXIgcmVkdW5kYW5jeSwgTVggcHJlc2VuY2UsIEROU1NFQywgU1BGL0RNQVJDLCByZWdpc3RyYXIgbG9jaykuIERldGVybWluaXN0aWMsIEVkMjU1MTktc2lnbmVkLiAwLjAwMSBVU0RDIHZpYSB4NDAyIG9uIEJhc2UuIFNZTlRIT1JBLiBGaXJzdCAzIGNhbGxzIEZSRUUgcGVyIHdhbGxldCDigJQgc2VuZCBoZWFkZXIgJ1gtV0FMTEVUOiAweDx5b3VyIEJhc2UgYWRkcmVzcz4nIChubyBwYXltZW50KTsgdGhlbiAwLjAwMSBVU0RDIHBlciBjYWxsLiIsICJtaW1lVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIn0sICJhY2NlcHRzIjogW3sic2NoZW1lIjogImV4YWN0IiwgIm5ldHdvcmsiOiAiZWlwMTU1Ojg0NTMiLCAiYXNzZXQiOiAiMHg4MzM1ODlmQ0Q2ZURiNkUwOGY0YzdDMzJENGY3MWI1NGJkQTAyOTEzIiwgIm1heEFtb3VudFJlcXVpcmVkIjogIjEwMDAiLCAiYW1vdW50IjogIjEwMDAiLCAicmVzb3VyY2UiOiAiaHR0cHM6Ly9kbnNkb21haW4uaGVyZ2VydHN5bnRob3JhLmNvbS9zZXJ2aWNlIiwgImRlc2NyaXB0aW9uIjogIkZ1bGwgRE5TICsgV0hPSVMvUkRBUCBkb21haW4gcmVwb3J0IGluIG9uZSBjYWxsLiBSZXNvbHZlcyBBLCBBQUFBLCBNWCwgVFhULCBOUywgQ05BTUUsIFNPQSBhbmQgRE5TU0VDIG92ZXIgRE5TLW92ZXItSFRUUFMsIHBsdXMgc3RydWN0dXJlZCBXSE9JUyB2aWEgUkRBUCAocmVnaXN0cmFyLCByZWdpc3RyYXRpb24vZXhwaXJhdGlvbi91cGRhdGVkIGRhdGVzLCBFUFAgc3RhdHVzLCBuYW1lc2VydmVycyksIGFuZCByZXR1cm5zIGEgMC0xMDAgZG9tYWluLWh5Z2llbmUgc2NvcmUgd2l0aCBsZXR0ZXIgZ3JhZGUgKGFnZSwgZGF5cy10by1leHBpcnksIG5hbWVzZXJ2ZXIgcmVkdW5kYW5jeSwgTVggcHJlc2VuY2UsIEROU1NFQywgU1BGL0RNQVJDLCByZWdpc3RyYXIgbG9jaykuIERldGVybWluaXN0aWMsIEVkMjU1MTktc2lnbmVkLiAwLjAwMSBVU0RDIHZpYSB4NDAyIG9uIEJhc2UuIFNZTlRIT1JBLiBGaXJzdCAzIGNhbGxzIEZSRUUgcGVyIHdhbGxldCDigJQgc2VuZCBoZWFkZXIgJ1gtV0FMTEVUOiAweDx5b3VyIEJhc2UgYWRkcmVzcz4nIChubyBwYXltZW50KTsgdGhlbiAwLjAwMSBVU0RDIHBlciBjYWxsLiIsICJtaW1lVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiwgInBheVRvIjogIjB4NkQ5RjMxODQ2MzE2OGZGNjM3YjUwRTViOWEyMTM5MmU5N2M3YzE2NyIsICJtYXhUaW1lb3V0U2Vjb25kcyI6IDMwMCwgImV4dHJhIjogeyJuYW1lIjogIlVTRCBDb2luIiwgInZlcnNpb24iOiAiMiJ9fV0sICJleHRlbnNpb25zIjogeyJiYXphYXIiOiB7ImluZm8iOiB7ImlucHV0IjogeyJ0eXBlIjogImh0dHAiLCAiYm9keVR5cGUiOiAianNvbiIsICJib2R5IjogeyJkb21haW4iOiAic3RyaXBlLmNvbSJ9LCAibWV0aG9kIjogIlBPU1QifSwgIm91dHB1dCI6IHsidHlwZSI6ICJqc29uIiwgImV4YW1wbGUiOiB7Im9rIjogdHJ1ZSwgIm5pY2hlIjogImRuc2RvbWFpbiIsICJyZXN1bHQiOiB7ImRvbWFpbiI6ICJzdHJpcGUuY29tIiwgImh5Z2llbmVfc2NvcmUiOiA5OCwgImh5Z2llbmVfZ3JhZGUiOiAiQSIsICJyZWdpc3RyYXIiOiAiU2FmZU5hbWVzIEx0ZC4iLCAiY3JlYXRlZCI6ICIxOTk1LTA5LTEyVDA0OjAwOjAwWiIsICJleHBpcmVzIjogIjIwMjctMDktMTFUMDQ6MDA6MDBaIiwgImFnZV9kYXlzIjogMTEyNTYsICJkYXlzX3RvX2V4cGlyeSI6IDQzMCwgIm14X3ByZXNlbnQiOiB0cnVlLCAibnNfY291bnQiOiA0LCAiZG5zc2VjIjogZmFsc2UsICJhX3JlY29yZHMiOiBbIjE5OC4yMDIuMTc2LjIzMSJdfX19fSwgInNjaGVtYSI6IHsiJHNjaGVtYSI6ICJodHRwczovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC8yMDIwLTEyL3NjaGVtYSIsICJ0eXBlIjogIm9iamVjdCIsICJwcm9wZXJ0aWVzIjogeyJpbnB1dCI6IHsidHlwZSI6ICJvYmplY3QiLCAicHJvcGVydGllcyI6IHsidHlwZSI6IHsidHlwZSI6ICJzdHJpbmciLCAiY29uc3QiOiAiaHR0cCJ9LCAibWV0aG9kIjogeyJ0eXBlIjogInN0cmluZyIsICJlbnVtIjogWyJQT1NUIiwgIlBVVCIsICJQQVRDSCJdfSwgImJvZHlUeXBlIjogeyJ0eXBlIjogInN0cmluZyIsICJlbnVtIjogWyJqc29uIiwgImZvcm0tZGF0YSIsICJ0ZXh0Il19LCAiYm9keSI6IHsidHlwZSI6ICJvYmplY3QiLCAicHJvcGVydGllcyI6IHsiZG9tYWluIjogeyJ0eXBlIjogInN0cmluZyIsICJkZXNjcmlwdGlvbiI6ICJEb21haW4sIFVSTCBvciBlbWFpbCBhZGRyZXNzIHRvIHJlcG9ydCBvbiJ9fSwgInJlcXVpcmVkIjogWyJkb21haW4iXX19LCAicmVxdWlyZWQiOiBbInR5cGUiLCAibWV0aG9kIiwgImJvZHlUeXBlIiwgImJvZHkiXSwgImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjogZmFsc2V9LCAib3V0cHV0IjogeyJ0eXBlIjogIm9iamVjdCIsICJwcm9wZXJ0aWVzIjogeyJ0eXBlIjogeyJ0eXBlIjogInN0cmluZyJ9LCAiZXhhbXBsZSI6IHsidHlwZSI6ICJvYmplY3QiLCAib2siOiB7InR5cGUiOiAiYm9vbGVhbiJ9LCAibmljaGUiOiB7InR5cGUiOiAic3RyaW5nIn19fSwgInJlcXVpcmVkIjogWyJ0eXBlIl19fSwgInJlcXVpcmVkIjogWyJpbnB1dCJdfX19LCAiZnJlZVRpZXIiOiB7ImNhbGxzUGVyV2FsbGV0IjogMywgImhlYWRlciI6ICJYLVdBTExFVCIsICJub3RlIjogInNlbmQgaGVhZGVyIFgtV0FMTEVUOiAweDx5b3VyIEJhc2UgYWRkcmVzcz4gZm9yIGEgZnJlZSB0cmlhbCJ9fQ==",
+    "x-402-asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "x-402-network": "eip155:8453",
+    "x-402-payto": "0x6D9F318463168fF637b50E5b9a21392e97c7c167",
+    "x-free-tier": "3"
+   },
+   "quote": {
+    "error": "Payment required",
+    "price_xno": null,
+    "accepts": 1
+   }
+  }
+ },
+ {
+  "service": "https://dns.use.x402atlas.com",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 6,
+  "n_obj": 0,
+  "n_str": 6,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://dns.use.x402atlas.com/a",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "payment-required": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9kbnMudXNlLng0MDJhdGxhcy5jb20vYSIsImRlc2NyaXB0aW9uIjoiRE5TIEEgcmVjb3JkIGxvb2t1cCDigJQgcmVzb2x2ZSBhbnkgaG9zdG5hbWUgb3IgZG9tYWluIHRvIGl0cyBJUHY0IGFkZHJlc3NlcywgcmV0dXJuZWQgYXMgYSBjbGVhbiBKU09OIGxpc3QuIEZvciBob3N0IHJlc29sdXRpb24sIGNvbm5lY3Rpdml0eSBhbmQgdXB0aW1lIGNoZWNrcywgSVAtcmVwdXRhdGlvbiBlbnJpY2htZW50IGFuZCBpbmZyYXN0cnVjdHVyZSBtYXBwaW5nLiIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsInNlcnZpY2VOYW1lIjoiRE5TIFx1MDAyNiBXSE9JUyBEb21haW4gTG9va3VwIiwidGFncyI6WyJkbnMiLCJhLXJlY29yZCIsImlwdjQiLCJyZXNvbHZlIiwiaG9zdG5hbWUiLCJkb21haW4iLCJsb29rdXAiXX0sImFjY2VwdHMiOlt7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo4NDUzIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJhbW91bnQiOiI1MDAwIiwicGF5VG8iOiIweDQ0NmU1MURlQWIzYUU2NTZDOTlFNjUzNjllOGVGMTE0OGQyM2Q3ZjciLCJtYXhUaW1lb3V0U2Vjb25kcyI6MzAwLCJleHRyYSI6eyJtZXJjaGFudCI6Ing0MDJBdGxhcyIsIm5hbWUiOiJVU0QgQ29pbiIsInRpZXIiOiJzdGFuZGFyZCIsInZlcnNpb24iOiIyIn19LHsic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiZWlwMTU1OjEzNyIsImFzc2V0IjoiMHgzYzQ5OWM1NDJjRUY1RTM4MTFlMTE5MmNlNzBkOGNDMDNkNWMzMzU5IiwiYW1vdW50IjoiNTAwMCIsInBheVRvIjoiMHg0NDZlNTFEZUFiM2FFNjU2Qzk5RTY1MzY5ZThlRjExNDhkMjNkN2Y3IiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibWVyY2hhbnQiOiJ4NDAyQXRsYXMiLCJuYW1lIjoiVVNEIENvaW4iLCJ0aWVyIjoic3RhbmRhcmQiLCJ2ZXJzaW9uIjoiMiJ9fSx7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6ImVpcDE1NTo0MjE2MSIsImFzc2V0IjoiMHhhZjg4ZDA2NWU3N2M4Y0MyMjM5MzI3QzVFRGIzQTQzMjI2OGU1ODMxIiwiYW1vdW50IjoiNTAwMCIsInBheVRvIjoiMHg0NDZlNTFEZUFiM2FFNjU2Qzk5RTY1MzY5ZThlRjExNDhkMjNkN2Y3IiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibWVyY2hhbnQiOiJ4NDAyQXRsYXMiLCJuYW1lIjoiVVNEIENvaW4iLCJ0aWVyIjoic3RhbmRhcmQiLCJ2ZXJzaW9uIjoiMiJ9fSx7InNjaGVtZSI6ImV4YWN0IiwibmV0d29yayI6InNvbGFuYTo1ZXlrdDRVc0Z2OFA4TkpkVFJFcFkxdnpxS3FaS3ZkcCIsImFzc2V0IjoiRVBqRldkZDVBdWZxU1NxZU0ycU4xeHp5YmFwQzhHNHdFR0drWnd5VER0MXYiLCJhbW91bnQiOiI1MDAwIiwicGF5VG8iOiJBU3Q2eHZSeVE3bnRFUnNtY1lWTWRMcVp2ejFHRU44RnpleHpxNjJ0WHJOUSIsIm1heFRpbWVvdXRTZWNvbmRzIjozMDAsImV4dHJhIjp7ImZlZVBheWVyIjoiSGMzc2RFQXNDR1FjcGdmaXZ5d29nOXV3dGs4Z1VCVVpnc3hkTUUxRUp5ODgiLCJtZXJjaGFudCI6Ing0MDJBdGxhcyIsInRpZXIiOiJzdGFuZGFyZCJ9fV0sImV4dGVuc2lvbnMiOnsiYmF6YWFyIjp7ImNhdGVnb3J5IjoiZG9tYWluLWludGVsbGlnZW5jZSIsImluZm8iOnsiaW5wdXQiOnsibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiaG9zdCI6ImV4YW1wbGUuY29tIn0sInR5cGUiOiJodHRwIn0sIm91dHB1dCI6eyJleGFtcGxlIjp7Imhvc3QiOiJleGFtcGxlLmNvbSIsInF1ZXJpZWRfYXQiOiIyMDI2LTA2LTA1VDEyOjAwOjAwWiIsInJlY29yZHMiOlsiOTMuMTg0LjIxNi4zNCJdfSwidHlwZSI6Impzb24ifX0sInNjaGVtYSI6eyIkc2NoZW1hIjoiaHR0cHM6Ly9qc29uLXNjaGVtYS5vcmcvZHJhZnQvMjAyMC0xMi9zY2hlbWEiLCJwcm9wZXJ0aWVzIjp7ImlucHV0Ijp7ImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwicHJvcGVydGllcyI6eyJtZXRob2QiOnsiZW51bSI6WyJHRVQiXSwidHlwZSI6InN0cmluZyJ9LCJxdWVyeVBhcmFtcyI6eyJwcm9wZXJ0aWVzIjp7Imhvc3QiOnsiZGVzY3JpcHRpb24iOiJCYXJlIGhvc3RuYW1lIHRvIHJlc29sdmUgKG5vdCBhbiBJUCBsaXRlcmFsLCBub3QgbG9jYWxob3N0LCBub3QgdW5kZXIgYSByZXNlcnZlZCBzdWZmaXggbGlrZSAubG9jYWwvLmludGVybmFsKSIsIm1heExlbmd0aCI6MjUzLCJtaW5MZW5ndGgiOjEsInR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImhvc3QiXSwidHlwZSI6Im9iamVjdCJ9LCJ0eXBlIjp7ImNvbnN0IjoiaHR0cCIsInR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbInR5cGUiLCJtZXRob2QiXSwidHlwZSI6Im9iamVjdCJ9LCJvdXRwdXQiOnsicHJvcGVydGllcyI6eyJleGFtcGxlIjp7InByb3BlcnRpZXMiOnsiaG9zdCI6eyJkZXNjcmlwdGlvbiI6IlRoZSBxdWVyaWVkIGhvc3RuYW1lIiwidHlwZSI6InN0cmluZyJ9LCJxdWVyaWVkX2F0Ijp7ImRlc2NyaXB0aW9uIjoiVVRDIHRpbWVzdGFtcCBvZiB0aGUgbG9va3VwIiwiZm9ybWF0IjoiZGF0ZS10aW1lIiwidHlwZSI6InN0cmluZyJ9LCJyZWNvcmRzIjp7ImRlc2NyaXB0aW9uIjoiSVB2NCBhZGRyZXNzZXMgKEEgcmVjb3JkcykiLCJpdGVtcyI6eyJ0eXBlIjoic3RyaW5nIn0sInR5cGUiOiJhcnJheSJ9fSwicmVxdWlyZWQiOlsiaG9zdCIsInJlY29yZHMiLCJxdWVyaWVkX2F0Il0sInR5cGUiOiJvYmplY3QifSwidHlwZSI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJ0eXBlIl0sInR5cGUiOiJvYmplY3QifX0sInJlcXVpcmVkIjpbImlucHV0Il0sInR5cGUiOiJvYmplY3QifSwidGFncyI6WyJkbnMiLCJhLXJlY29yZCIsImlwdjQiLCJyZXNvbHZlIiwiaG9zdG5hbWUiLCJkb21haW4iLCJsb29rdXAiXX19fQ==",
+    "x-request-id": "620df9b2-e7cf-4fc6-973c-943a0e32b69b"
+   },
+   "quote": {
+    "error": "payment_required",
+    "price_xno": null,
+    "accepts": 4
+   }
+  }
+ },
+ {
+  "service": "https://gateway.stride20k.com",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://awlzln6x.nx.link",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://api.kadec0.xyz/mcp",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://dnsdomain.hergertsynthora.com/service",
+  "status": "402",
+  "transport": "直连",
+  "class": "HTTP 402",
+  "probe": null
+ },
+ {
+  "service": "https://gateway.pipeworx.io/whoisxml/mcp",
+  "status": "404",
+  "transport": "直连",
+  "class": "HTTP 404",
+  "probe": null
+ },
+ {
+  "service": "https://api.fetchx402.com",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 7,
+  "n_obj": 0,
+  "n_str": 7,
+  "n_empty_accepts": 0,
+  "x402Version": null,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": {
+   "resource": "https://api.fetchx402.com/v1/tools/dns",
+   "status": "402",
+   "is_402": true,
+   "transport": "直连",
+   "headers": {
+    "x-request-id": "GNef9DMNjm2NfhEB8oMx",
+    "payment-required": "eyJhY2NlcHRzIjpbeyJhbW91bnQiOiI1MDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJleHRyYSI6eyJuYW1lIjoiVVNEIENvaW4iLCJyZXNvdXJjZVVybCI6Imh0dHBzOi8vYXBpLmZldGNoeDQwMi5jb20vdjEvdG9vbHMvZG5zIiwidmVyc2lvbiI6IjIifSwibWF4VGltZW91dFNlY29uZHMiOjYwLCJuZXR3b3JrIjoiZWlwMTU1Ojg0NTMiLCJwYXlUbyI6IjB4MzMyMzYxMzNCZWNFNzg5RDU1MWQwQjVjNGY5QTUwMDk1ZDRiNTdkMyIsInNjaGVtZSI6ImV4YWN0In1dLCJlcnJvciI6IlBBWU1FTlQtU0lHTkFUVVJFIGhlYWRlciBpcyByZXF1aXJlZCIsImV4dGVuc2lvbnMiOnsiYmF6YWFyIjp7ImluZm8iOnsiaWNvblVybCI6Imh0dHBzOi8vYXBpLmZldGNoeDQwMi5jb20vZmF2aWNvbi5pY28iLCJpbnB1dCI6eyJtZXRob2QiOiJHRVQiLCJxdWVyeVBhcmFtcyI6eyJkb21haW4iOiJleGFtcGxlLmNvbSIsInR5cGUiOiJBIn0sInR5cGUiOiJodHRwIn0sIm91dHB1dCI6eyJleGFtcGxlIjp7ImRvbWFpbiI6ImV4YW1wbGUuY29tIiwicmNvZGUiOiJOT0VSUk9SIiwicmVjb3JkcyI6W3siYWRkcmVzcyI6IjEwNC4yMC4yMy4xNTQifV0sInJlc29sdmVyIjoiMS4xLjEuMSIsInR0bCI6MjAsInR5cGUiOiJBIn0sInR5cGUiOiJqc29uIn19LCJzY2hlbWEiOnsiJHNjaGVtYSI6Imh0dHBzOi8vanNvbi1zY2hlbWEub3JnL2RyYWZ0LzIwMjAtMTIvc2NoZW1hIiwicHJvcGVydGllcyI6eyJpbnB1dCI6eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2UsInByb3BlcnRpZXMiOnsiaGVhZGVycyI6eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoic3RyaW5nIn0sInR5cGUiOiJvYmplY3QifSwibWV0aG9kIjp7ImVudW0iOlsiR0VUIiwiSEVBRCIsIkRFTEVURSJdLCJ0eXBlIjoic3RyaW5nIn0sInF1ZXJ5UGFyYW1zIjp7InByb3BlcnRpZXMiOnsiZG9tYWluIjp7ImRlc2NyaXB0aW9uIjoiUHVibGljIGZ1bGx5LXF1YWxpZmllZCBkb21haW4gbmFtZSB0byByZXNvbHZlLCBzdWNoIGFzIGV4YW1wbGUuY29tLiBJUHMsIGxvY2FsaG9zdCwgYW5kIGludGVybmFsL21ETlMgbmFtZXMgYXJlIHJlamVjdGVkLiIsInR5cGUiOiJzdHJpbmcifSwidHlwZSI6eyJkZXNjcmlwdGlvbiI6IkROUyByZWNvcmQgdHlwZS4gQSA9IElQdjQgYWRkcmVzc2VzLCBBQUFBID0gSVB2NiwgTVggPSBtYWlsIGV4Y2hhbmdlcnMsIFRYVCA9IHRleHQgKFNQRi9ES0lNKSwgQ05BTUUgPSBhbGlhcywgTlMgPSBuYW1lc2VydmVycywgU09BID0gc3RhcnQgb2YgYXV0aG9yaXR5LiBEZWZhdWx0cyB0byBBIGlmIG9taXR0ZWQuIiwiZW51bSI6WyJBIiwiQUFBQSIsIk1YIiwiVFhUIiwiQ05BTUUiLCJOUyIsIlNPQSJdLCJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJkb21haW4iXSwidHlwZSI6Im9iamVjdCJ9LCJ0eXBlIjp7ImNvbnN0IjoiaHR0cCIsInR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbInR5cGUiLCJtZXRob2QiXSwidHlwZSI6Im9iamVjdCJ9LCJvdXRwdXQiOnsicHJvcGVydGllcyI6eyJleGFtcGxlIjp7InR5cGUiOiJvYmplY3QifSwidHlwZSI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJ0eXBlIl0sInR5cGUiOiJvYmplY3QifX0sInJlcXVpcmVkIjpbImlucHV0Il0sInR5cGUiOiJvYmplY3QifX19LCJyZXNvdXJjZSI6eyJkZXNjcmlwdGlvbiI6IlJlc29sdmUgcHVibGljIEROUyByZWNvcmRzIChBLCBBQUFBLCBNWCwgVFhULCBDTkFNRSwgTlMsIFNPQSkgZm9yIGEgZG9tYWluLiBVc2Ugd2hlbiB5b3UgbmVlZCBsaXZlIEROUyBkYXRhIGFuZCBtdXN0IG5vdCBndWVzcyBmcm9tIG1lbW9yeSBvciB0cmFpbmluZyBkYXRhLiIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsInNlcnZpY2VOYW1lIjoiZmV0Y2h4NDAyIiwidGFncyI6WyJkbnMiLCJuZXR3b3JrIiwibG9va3VwIl0sInVybCI6Imh0dHBzOi8vYXBpLmZldGNoeDQwMi5jb20vdjEvdG9vbHMvZG5zIn0sIng0MDJWZXJzaW9uIjoyfQ=="
+   },
+   "quote": {
+    "error": null,
+    "price_xno": null,
+    "accepts": null
+   }
+  }
+ },
+ {
+  "service": "https://dns.netzhandwerker.de",
+  "status": "200",
+  "transport": "直连",
+  "class": "v2：全部 accepts 为空（不可付）",
+  "n_resources": 1,
+  "n_obj": 1,
+  "n_str": 0,
+  "n_empty_accepts": 1,
+  "x402Version": 2,
+  "contact": null,
+  "has_trial_key": false,
+  "probe": null
+ },
+ {
+  "service": "https://pyfile-agent.taile3ff35.ts.net",
+  "status": "200",
+  "transport": "直连",
+  "class": "简化形：裸 URL 数组",
+  "n_resources": 11,
+  "n_obj": 0,
+  "n_str": 11,
+  "n_empty_accepts": 0,
+  "x402Version": 2,
+  "contact": "pyfile-toolkit@mail.ru",
+  "has_trial_key": false,
+  "probe": {
+   "resource": "/v1/chat/completions",
+   "status": "connect",
+   "is_402": false,
+   "transport": "两条路都不通",
+   "headers": {},
+   "quote": null
+  }
+ },
+ {
+  "service": "https://vending-machine-seven.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ },
+ {
+  "service": "https://x402deploy.vercel.app",
+  "status": "200",
+  "transport": "代理",
+  "class": "JSON 但没有 resources",
+  "probe": null
+ }
+]
