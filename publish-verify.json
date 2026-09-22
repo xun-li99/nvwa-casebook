@@ -1,7 +1,38 @@
 {
- "verified_at": "2026-09-22T20:20:24.798804",
+ "verified_at": "2026-09-22T20:25:54.163229",
  "repo": "xun-li99/nvwa-casebook",
+ "how": "GitHub contents API blob, byte-for-byte against the local file; raw.githubusercontent is not used (CDN cache)",
  "files": [
+  {
+   "path": "bundle/bundle-20260922T122513Z.md",
+   "bytes": 652831,
+   "sha256": "2a2d505ac592042bc7685ccfe416ee92b04047e91ec496781a8c03536172ed67",
+   "一致": true
+  },
+  {
+   "path": "源-9月结论-0922.md",
+   "bytes": 34316,
+   "sha256": "86914f65800550408384f76a3a5a51962275c59f2fa7b78385c7ac31a4cdd5e5",
+   "一致": true
+  },
+  {
+   "path": "CASES.md",
+   "bytes": 36623,
+   "sha256": "a17276062d827033c2c6222395d8da0adf3b1ec242e46d06e6f803c165168556",
+   "一致": true
+  },
+  {
+   "path": "cases/0003-write-200-nothing-created.md",
+   "bytes": 6315,
+   "sha256": "2d722f7ea159cb5f63ddd32be8117a901d933fd79b988d507fdff50ebf7cac02",
+   "一致": true
+  },
+  {
+   "path": "cases/0035-environment-not-in-the-receipt.md",
+   "bytes": 17050,
+   "sha256": "fcfa77a5fd49c09021bd1eb96a8d9b9074276e35bfa97c97bdb42827c8bdf4fa",
+   "一致": true
+  },
   {
    "path": "x402/audit-0922.json",
    "bytes": 61733,
