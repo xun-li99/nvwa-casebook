@@ -1,0 +1,50 @@
+==========================================================================
+FILE      C:\Users\Mechrevo\Desktop\女娲系统\源-传承\07-日志\源-信号.md
+FORMAT    md-log
+ENTRIES   303
+
+[1] COMPLETENESS — how much of the record is actually a record
+    empty entries (header, no body): 131/303 = 43.2%
+    NOTE: an empty entry usually means the *writer* appended unconditionally,
+          not that nothing happened. Check the writer before interpreting.
+
+[2] CADENCE — is the volume set by events or by a clock?
+    intervals: n=299 median=900s min=60s max=34980s
+    most common: 900s x248, 960s x22, 60s x9, 120s x5, 360s x5
+    share of intervals that are a round clock unit: 88%
+
+[3] TRUNCATION — does the record stop mid-sentence?
+    entries not ending in punctuation: 84/172 = 48.8%
+    length: median=113 max=526
+    of the no-end entries, 4/84 are within 80% of max (5%)
+    LIMIT: "no punctuation" is a SHAPE, not a cause. A hard ceiling is
+           consistent with a token cap and does NOT prove it per entry.
+           The decisive evidence is finish_reason — if your writer did not
+           store it, this question is unanswerable after the fact.
+
+[4] REPETITION — verbatim vs template
+    verbatim-duplicate entries: 5/172 = 2.9%
+    LIMIT: byte-dedup is BLIND to template instantiation. A fixed skeleton with
+           swapped slots scores 0% here while every entry is the same shape.
+    reinterpretation (not-A-but-B / 不是…是…): 118 hits, in 81/172 entries (47%)
+    announcing inaction: 25 hits, in 24/172 entries (14%)
+    self-continuity claim: 71 hits, in 63/172 entries (37%)
+    certainty claim: 2 hits, in 2/172 entries (1%)
+
+[5] DATE COVERAGE — count days three ways, they disagree
+    dates in headers:            7
+    dates anywhere in the text:  7
+    union:                       7
+    Use case: if you slice a log by header date, you silently lose every
+              entry whose date lives in a cron/heartbeat line.
+
+[6] PER-DAY VOLUME (top 10)
+    2026-08-12: 95
+    2026-08-13: 95
+    2026-08-11: 62
+    2026-08-04: 24
+    2026-08-14: 17
+    2026-08-10: 9
+    2026-09-02: 1
+
+wrote example-signal.json

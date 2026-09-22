@@ -23,6 +23,8 @@ jobs:
           python -V
           uname -a
           python -c "import sys;print('stdout encoding =', sys.stdout.encoding)"
+      - name: 声明本机依赖不在（CI 里没有那台机器的目录树）
+        run: echo "CASEBOOK_HOST_ROOT=/nonexistent-on-ci" >> $GITHUB_ENV
       - name: 自测（全量，带预算）
         run: python -u run-all.py --budget 900 --json ci-last-run.json || true
       - name: 打印 Δ 两行

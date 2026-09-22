@@ -1,0 +1,19 @@
+{
+  "file": "C:\\Users\\Mechrevo\\Desktop\\女娲系统\\源-传承\\07-日志\\源-信号.md",
+  "format": "md-log",
+  "entries": 303,
+  "empty": 131,
+  "empty_pct": 43.23,
+  "no_terminal_punct": 84,
+  "median_interval_s": 900,
+  "verbatim_dupes": 5,
+  "per_day": {
+    "2026-08-04": 24,
+    "2026-08-10": 9,
+    "2026-08-11": 62,
+    "2026-08-12": 95,
+    "2026-08-13": 95,
+    "2026-08-14": 17,
+    "2026-09-02": 1
+  }
+}

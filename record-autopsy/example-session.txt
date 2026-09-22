@@ -1,0 +1,31 @@
+==========================================================================
+FILE      C:\Users\Mechrevo\Desktop\璃\零\current_session.json
+FORMAT    json-chat
+ENTRIES   48
+
+[1] COMPLETENESS — how much of the record is actually a record
+    empty entries (header, no body): 0/48 = 0.0%
+    NOTE: an empty entry usually means the *writer* appended unconditionally,
+          not that nothing happened. Check the writer before interpreting.
+
+[2] CADENCE — is the volume set by events or by a clock?
+    no parseable timestamps
+
+[3] TRUNCATION — does the record stop mid-sentence?
+    entries not ending in punctuation: 5/48 = 10.4%
+    length: median=106 max=438
+    of the no-end entries, 0/5 are within 80% of max (0%)
+    LIMIT: "no punctuation" is a SHAPE, not a cause. A hard ceiling is
+           consistent with a token cap and does NOT prove it per entry.
+           The decisive evidence is finish_reason — if your writer did not
+           store it, this question is unanswerable after the fact.
+
+[4] REPETITION — verbatim vs template
+    verbatim-duplicate entries: 0/48 = 0.0%
+    LIMIT: byte-dedup is BLIND to template instantiation. A fixed skeleton with
+           swapped slots scores 0% here while every entry is the same shape.
+    reinterpretation (not-A-but-B / 不是…是…): 9 hits, in 7/48 entries (15%)
+    announcing inaction: 0 hits, in 0/48 entries (0%)
+    self-continuity claim: 31 hits, in 28/48 entries (58%)
+    certainty claim: 0 hits, in 0/48 entries (0%)
+

@@ -1,0 +1,15 @@
+{
+  "file": "C:\\Users\\Mechrevo\\Desktop\\女娲系统\\源-传承\\03-实践\\record-autopsy\\packet-0912\\artifacts-and-sends.jsonl",
+  "format": "jsonl",
+  "entries": 249,
+  "empty": 0,
+  "empty_pct": 0.0,
+  "no_terminal_punct": 221,
+  "median_interval_s": 0,
+  "verbatim_dupes": 0,
+  "per_day": {
+    "2026-09-10": 156,
+    "2026-09-11": 59,
+    "2026-09-12": 34
+  }
+}

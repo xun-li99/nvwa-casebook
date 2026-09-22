@@ -1,0 +1,10 @@
+{"kind": "ok-iso", "ts": "2026-09-14T00:00:00.000+00:00"}
+{"kind": "missing-key"}
+{"kind": "explicit-null", "ts": null}
+{"kind": "epoch-zero", "ts": 0}
+{"kind": "epoch-ms-int", "ts": 1789166512304}
+{"kind": "float-notation", "ts": "1e6"}
+{"kind": "blank-string", "ts": " "}
+{"kind": "wrong-type-dict", "ts": {}}
+{"kind": "wrong-type-bool", "ts": true}
+{"kind": "epoch-sec-str", "ts": "1789166512"}

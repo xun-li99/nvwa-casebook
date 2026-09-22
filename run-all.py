@@ -45,8 +45,46 @@ STORE = Path(os.environ.get('CASEBOOK_STORE',
                             r'C:\Users\Mechrevo\Desktop\女娲网络重建\network\network.sqlite3'))
 CORPUS_0005 = Path(os.environ.get('CASEBOOK_0005_CORPUS',
                                   r'C:\Users\Mechrevo\Desktop\璃\零\cargo\存活.md'))
-IDENT = Path(r'C:\Users\Mechrevo\Desktop\璃\零\nuwa-身份.json')
+# 本机树的根：默认是这台机器，但**可以用 CASEBOOK_HOST_ROOT 整体挪走**——
+# 这样"依赖不在时该报什么"本身可以被测（指到一个不存在的根，看它报测不了还是崩）。
+LI = Path(os.environ.get('CASEBOOK_HOST_ROOT', r'C:\Users\Mechrevo\Desktop')) / '璃'
+TMPD = LI / '临时文件'
+IDENT = Path(os.environ.get('CASEBOOK_IDENT', str(LI / '零' / 'nuwa-身份.json')))
 MY_POST = '3ab7b77e-039f-4054-a886-368f9e0a2e2f'
+
+# ---------------------------------------------------------------- 本机依赖（2026-09-22 加，**CI 逼出来的**）
+# 起因要写清楚：我第一次把病历放进 GitHub Actions 在干净的 Ubuntu 上跑，38 条里 **8 条报"案卷坏了"**
+# ——它们把 `C:\Users\Mechrevo\...` 写死在代码里，在别的机器上直接 FileNotFoundError。
+# **分类当时是对的**（"案卷坏了"＝我的机器坏了，不许说世界），但它戳穿了我最核心的那句承诺：
+# **"任何人都能重跑"**。8 条崩掉、11 条老实报"输入不在" ⇒ 38 条里 19 条绑在这一台机器上。
+# 规则（这一节就是规则的落点）：
+#   **绑本机的检查必须声明它要什么；缺了就报"测不了"并点名缺哪个——绝不抛，也绝不冒成"案卷坏了"。**
+# 判据一句话：*"这台机器没有它"是 no-answer（世界没答），不是 self-broken（我的机器坏了）。*
+# （LI / TMPD / IDENT 在文件上方定义，那里已经带了 CASEBOOK_HOST_ROOT 这个整体挪走的开关。）
+HOST = {
+    'ident':       (IDENT, 'Colony 身份文件（零\\nuwa-身份.json）'),
+    'balance_py':  (TMPD / 'balance-check.py', 'balance-check.py（被量的那件量具）'),
+    'balance_log': (TMPD / 'balance-log.csv', 'balance-log.csv（它的读数流水）'),
+    'notify3':     (TMPD / '通知三态.py', '通知三态.py（三态读取器）'),
+    'leak_probe':  (TMPD / '测-三态泄漏.py', '测-三态泄漏.py（三态泄漏探针）'),
+    'superteam':   (LI / '量superteam.py', '量superteam.py（读场所闸门的仪器）'),
+    'inbox_chk':   (TMPD / 'inbox-check.py', 'inbox-check.py（入站闸门）'),
+    'py_guard':    (LI / '零' / '桥' / 'bridge_guardian.py', 'bridge_guardian.py（桥守护器）'),
+    'js_guard':    (TMPD / 'x402-svc' / 'x402-守护.mjs', 'x402-守护.mjs（自愈守护器）'),
+    'autopsy':     (HERE.parent / 'record-autopsy' / 'autopsy.py', 'autopsy.py（被量的量具本体）'),
+    'store':       (STORE, '本机网络库（network.sqlite3）'),
+}
+
+
+def host_missing(keys):
+    """返回缺失的本机依赖清单（空 = 都在）。**只回答"在不在"，不回答"世界怎么样"。**"""
+    return ['%s，找的是 %s' % (HOST[k][1], HOST[k][0]) for k in keys if not HOST[k][0].exists()]
+
+
+def host_unmeasurable(miss, what):
+    """本机依赖缺失时的标准判词：测不了（no-answer），并且点名缺哪个。"""
+    return '测不了', ('这条绑在本机（%s）：%s。**这不是"已修复"，也不是"世界变了"**——'
+                    '是这台机器量不了。' % (what, '；'.join(miss)))
 
 
 # ---------------------------------------------------------------- 0001
@@ -92,6 +130,9 @@ def check_0002():
 
 # ---------------------------------------------------------------- 0003
 def check_0003():
+    miss = host_missing(['ident'])
+    if miss:
+        return host_unmeasurable(miss, '这条要 Colony 凭据才能去打那两个域名')
     ident = json.loads(IDENT.read_text(encoding='utf-8'))
     hdr = {'User-Agent': 'nuwa', 'Authorization': 'Bearer ' + ident['jwt'],
            'Content-Type': 'application/json', 'Accept': 'application/json'}
@@ -110,6 +151,13 @@ def check_0003():
     www = out['https://www.thecolony.cc']
     if not isinstance(apex, int):
         return '测不了', f'apex 打不通（{apex}）——此时 www 的响应什么也证明不了'
+    # 2026-09-22 加：**www 打不通不是"这条修好了"。**
+    # 这一支以前是 `www == 200` 判"仍复现"，于是 www 不可达时落进"已修复"——
+    # 把"我没打通"读成了"世界里那个洞没了"。这正是本条研究的病，长在本条自己身上；
+    # 是今晚 Δ 那行（0003 已修复 → 仍复现）把它顶出来的。
+    if not isinstance(www, int):
+        return '测不了', (f'apex={apex}（校验拒绝，这一半读到了）但 www 打不通（{www}）——'
+                        f'**"我打不通"不是"这条修好了"**，所以这一格不判。')
     ok = apex >= 400 and www == 200
     return (('仍复现' if ok else '已修复'),
             f'apex={apex}（校验拒绝） www={www}' + ('（静默丢弃）' if www == 200 else ''))
@@ -1269,7 +1317,11 @@ def check_0022():
     tool = here.parent / 'record-autopsy' / 'autopsy.py'
     pinned = here.parent / 'record-autopsy' / 'packet-0912' / 'artifacts-and-sends.jsonl'
     if not tool.exists() or not pinned.exists():
-        return '案卷坏了', f'缺工具或钉死输入：tool={tool.exists()} pinned={pinned.exists()}'
+        # 2026-09-22 改：这里原来报"案卷坏了"，**分类错了**。案卷没坏——是这台机器上没带那两件东西
+        # （第一次在 GitHub runner 上跑就是这么红的）。缺本机依赖是 no-answer，不是 self-broken。
+        return '测不了', ('这条绑本机（record-autopsy 那一包）：autopsy.py 在=%s，钉死输入在=%s。'
+                        '**这不是"案卷坏了"，也不是"已修复"**——是这台机器量不了。'
+                        % (tool.exists(), pinned.exists()))
 
     fixture = [
         {'kind': 'ok', 'ts': '2026-09-14T00:00:00.000+00:00'},
@@ -1647,6 +1699,10 @@ def check_0025():
     import subprocess as sp
     from pathlib import Path as _P
 
+    miss = host_missing(['py_guard', 'js_guard'])
+    if miss:
+        return host_unmeasurable(miss, '两个守护器都不在这台机器上，解析与日志都无从谈起')
+
     arms = {}
     py_guard = _P(r'C:\Users\Mechrevo\Desktop\璃\零\桥\bridge_guardian.py')
     js_guard = _P(r'C:\Users\Mechrevo\Desktop\璃\临时文件\x402-svc\x402-守护.mjs')
@@ -1704,6 +1760,10 @@ def check_0026():
     """
     import csv as _csv
     from pathlib import Path as _P
+
+    miss = host_missing(['balance_log', 'balance_py'])
+    if miss:
+        return host_unmeasurable(miss, '被量的量具和它的读数流水都不在这台机器上')
 
     arms = {}
     lg = _P(r'C:\Users\Mechrevo\Desktop\璃\临时文件\balance-log.csv')
@@ -1811,6 +1871,10 @@ def check_0028():
     ④ 因此要求**网络读数报出传输的名字**，且不许把"我读不到"印成关于世界的结论。
     """
     from pathlib import Path as _P
+
+    miss = host_missing(['balance_py', 'notify3', 'leak_probe', 'superteam'])
+    if miss:
+        return host_unmeasurable(miss, '这三件仪器（含第④支要跑的那件）都不在这台机器上')
 
     pairs = [
         (HERE / 'run-all.py', '测不了', '五态里的"测不了"'),
@@ -1959,7 +2023,9 @@ def check_0029():
     log = tmp / 'inbox-log.csv'
     arms = {}
     if not src.exists():
-        return '案卷坏了', f'闸门脚本不在：{src}', arms
+        miss = host_missing(['inbox_chk'])
+        return (host_unmeasurable(miss, '入站闸门不在这台机器上') if miss
+                else ('案卷坏了', f'闸门脚本不在：{src}'))
     text = src.read_text(encoding='utf-8', errors='replace')
 
     # ① 新逻辑：分页取到底
@@ -2056,7 +2122,8 @@ def check_0030():
     tool = _P(r'C:\Users\Mechrevo\Desktop\璃\临时文件\通知三态.py')
     arms = {}
     if not tool.exists():
-        return '案卷坏了', f'文件不在：{tool}', arms
+        return (host_unmeasurable(host_missing(['notify3']), '三态读取器不在这台机器上')
+                if not HOST['notify3'][0].exists() else ('案卷坏了', f'文件不在：{tool}'))
     t = tool.read_text(encoding='utf-8', errors='replace')
 
     arms['①默认不标（要 --mark 才动手）'] = (
@@ -2376,6 +2443,11 @@ def check_0035():
     here = _P(__file__).resolve().parent
     harness = here / 'env-pin-test.py'
     tool = here.parent / 'record-autopsy' / 'autopsy.py'
+    # 2026-09-22 加：被量的那件量具不在时，报"测不了"而不是让后面的臂全变成"案卷坏了"。
+    if not tool.exists() or not harness.exists():
+        miss = [w for p, w in ((tool, 'autopsy.py（被量的量具本体）'),
+                               (harness, 'env-pin-test.py（扰动脚本）')) if not p.exists()]
+        return host_unmeasurable(miss, '这一条要跑的两件东西不在这台机器上')
     if not harness.exists():
         return '案卷坏了', f'扰动脚本不在：{harness}（本条的臂没得跑）'
     if not tool.exists():
