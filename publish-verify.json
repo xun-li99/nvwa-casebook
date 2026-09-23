@@ -1,66 +1,18 @@
 {
- "verified_at": "2026-09-22T20:46:53.639265",
+ "verified_at": "2026-09-23T22:06:20.765025",
  "repo": "xun-li99/nvwa-casebook",
- "how": "GitHub contents API blob, byte-for-byte against the local file; raw.githubusercontent is not used (CDN cache)",
+ "how": "GitHub contents API blob, byte-for-byte; raw is not used (CDN cache)",
  "files": [
   {
-   "path": "bundle/bundle-20260922T121803Z.md",
-   "bytes": 648309,
-   "sha256": "0fad5cc2ccca170c6862b3a433d7470d8a675d4c072cc6352a6ac5f54cd22b72",
+   "path": "x402/reading-3-2026-09-23.md",
+   "bytes": 4193,
+   "sha256": "ec161ee077b12fa468f728619b90ac4d38cff2efeb02063b7abf8fabda2e097e",
    "一致": true
   },
   {
-   "path": "bundle/bundle-20260922T122513Z.md",
-   "bytes": 652831,
-   "sha256": "2a2d505ac592042bc7685ccfe416ee92b04047e91ec496781a8c03536172ed67",
-   "一致": true
-  },
-  {
-   "path": "源-9月结论-0922.md",
-   "bytes": 34316,
-   "sha256": "86914f65800550408384f76a3a5a51962275c59f2fa7b78385c7ac31a4cdd5e5",
-   "一致": true
-  },
-  {
-   "path": "CASES.md",
-   "bytes": 36623,
-   "sha256": "a17276062d827033c2c6222395d8da0adf3b1ec242e46d06e6f803c165168556",
-   "一致": true
-  },
-  {
-   "path": "run-all.py",
-   "bytes": 199827,
-   "sha256": "b185832ba31b8d3ade566cefcd241fd3b61fd026892d430fa1e543ae9e5dc695",
-   "一致": true
-  },
-  {
-   "path": "casebook-alert.txt",
-   "bytes": 568,
-   "sha256": "0695c1ee83d7323ed6393f5ec5c24108d4d0136b5af0dff2da36d0db269d7deb",
-   "一致": true
-  },
-  {
-   "path": "cases/0003-write-200-nothing-created.md",
-   "bytes": 6315,
-   "sha256": "2d722f7ea159cb5f63ddd32be8117a901d933fd79b988d507fdff50ebf7cac02",
-   "一致": true
-  },
-  {
-   "path": "cases/0006-absent-read-as-clean.md",
-   "bytes": 10032,
-   "sha256": "aea0b8d6d4532df7377d3187cdc731bc906ca13aa1839c998d165839d8583387",
-   "一致": true
-  },
-  {
-   "path": "cases/0035-environment-not-in-the-receipt.md",
-   "bytes": 17551,
-   "sha256": "fab8ec6bd80285ecd962b6a31df4aff7de2eacd776b05efeb1bac772e0fba908",
-   "一致": true
-  },
-  {
-   "path": "x402/audit-0922.json",
-   "bytes": 61733,
-   "sha256": "39af73fa3fab5efbfc944aee463a533f894a83f6b2c020b64a174c12a4526e2d",
+   "path": "x402/x402-manifest-check.py",
+   "bytes": 6987,
+   "sha256": "284b83fcfb5ade3dd06f7f8571e9691b984a3bb8bbe65b34305eef36ed870d83",
    "一致": true
   },
   {
@@ -76,9 +28,9 @@
    "一致": true
   },
   {
-   "path": "x402/x402审计.py",
-   "bytes": 6940,
-   "sha256": "235551e09626d957455d2619dfe9e9d6b1b16b6414ec69671318d9e0f04c9ddf",
+   "path": "x402/audit-0922.json",
+   "bytes": 61733,
+   "sha256": "39af73fa3fab5efbfc944aee463a533f894a83f6b2c020b64a174c12a4526e2d",
    "一致": true
   }
  ]
